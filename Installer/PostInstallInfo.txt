@@ -1,0 +1,7 @@
+Post Installation Information
+
+Please use the Wizard to quickly configure LAWC to your desired settings.
+
+Add at least one folder of images to LAWC to get started.  The wizard will help you with this.
+
+After the wizard completes, you can also manually adjust all the settings once the application starts up.

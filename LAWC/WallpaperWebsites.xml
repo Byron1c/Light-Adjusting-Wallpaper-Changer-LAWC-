@@ -1,0 +1,93 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Websites">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="URL" type="xs:string" minOccurs="0" />
+                <xs:element name="LastVisited" type="xs:string" minOccurs="0" />
+                <xs:element name="Done" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Name" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Websites>
+    <URL>https://www.desktopnexus.com/</URL>
+    <LastVisited>11/09/2018 4:16:02 PM</LastVisited>
+    <Done>false</Done>
+    <Name>Desktop Nexus</Name>
+  </Websites>
+  <Websites>
+    <URL>https://www.deviantart.com/</URL>
+    <LastVisited>11/09/2018 4:16:02 PM</LastVisited>
+    <Done>false</Done>
+    <Name>DeviantArt</Name>
+  </Websites>
+  <Websites>
+    <URL>http://www.guoguiyan.com/weird-wallpapers.html</URL>
+    <LastVisited>11/09/2018 4:16:02 PM</LastVisited>
+    <Done>false</Done>
+    <Name>guoguiyan weird wallpapers</Name>
+  </Websites>
+  <Websites>
+    <URL>https://www.hdwallpapers.in/</URL>
+    <LastVisited>11/09/2018 4:16:02 PM</LastVisited>
+    <Done>false</Done>
+    <Name>HD Wallpapers</Name>
+  </Websites>
+  <Websites>
+    <URL>https://www.pexels.com/</URL>
+    <LastVisited>11/09/2018 4:16:02 PM</LastVisited>
+    <Done>false</Done>
+    <Name>Pexels</Name>
+  </Websites>
+  <Websites>
+    <URL>https://www.pixelstalk.net/</URL>
+    <LastVisited>11/09/2018 4:16:02 PM</LastVisited>
+    <Done>false</Done>
+    <Name>Pixels Talk</Name>
+  </Websites>
+  <Websites>
+    <URL>https://unsplash.com/wallpaper</URL>
+    <LastVisited>11/09/2018 4:16:02 PM</LastVisited>
+    <Done>false</Done>
+    <Name>Unsplash</Name>
+  </Websites>
+  <Websites>
+    <URL>https://wall.alphacoders.com/</URL>
+    <LastVisited>11/09/2018 4:16:02 PM</LastVisited>
+    <Done>false</Done>
+    <Name>Wallpaper Abyss</Name>
+  </Websites>
+  <Websites>
+    <URL>https://www.wallpaperup.com/</URL>
+    <LastVisited>11/09/2018 4:16:02 PM</LastVisited>
+    <Done>false</Done>
+    <Name>Wallpaper Up</Name>
+  </Websites>
+  <Websites>
+    <URL>https://wallpaperscraft.com/</URL>
+    <LastVisited>11/09/2018 4:16:02 PM</LastVisited>
+    <Done>false</Done>
+    <Name>Wallpapers Craft</Name>
+  </Websites>
+  <Websites>
+    <URL>http://wallpaperswide.com/latest_wallpapers.html</URL>
+    <LastVisited>11/09/2018 4:16:02 PM</LastVisited>
+    <Done>false</Done>
+    <Name>Wallpapers Wide</Name>
+  </Websites>
+  <Websites>
+    <URL>https://wallpapertag.com/surreal-wallpaper</URL>
+    <LastVisited>11/09/2018 4:16:02 PM</LastVisited>
+    <Done>false</Done>
+    <Name>WallpaperTag</Name>
+  </Websites>
+</NewDataSet>
