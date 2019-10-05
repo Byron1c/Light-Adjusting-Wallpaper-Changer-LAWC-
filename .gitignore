@@ -8,12 +8,12 @@
 *.sln.docstates
 
 # My Specific Files
-compile.bat
-copy.bat
-LAWCIconWorking.psd
-LAWC.iss_NEW
-App - Copy.config_
-Program BAK.cs_
+Installer/compile.bat
+Installer/copy.bat
+Installer/LAWCIconWorking.psd
+Installer/LAWC.iss_NEW
+LAWC/App - Copy.config_
+LAWC/Program BAK.cs_
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
