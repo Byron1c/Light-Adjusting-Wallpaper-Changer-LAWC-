@@ -485,10 +485,10 @@ namespace LAWC
                 //    vMessage += " * Select the Type for this event.\n";
                 //}
 
-                if ((int)numCheckSeconds.Value < 2)
+                if ((int)numCheckSeconds.Value < 5)
                 {
                     output = false;
-                    vMessage += " * Enter the number of seconds for how often you want this event to check (> 2).\n";
+                    vMessage += " * Enter the number of seconds for how often you want this event to check (> 5).\n";
                 }
 
                 if (string.IsNullOrEmpty(this.ImagePath) && string.IsNullOrEmpty(txtMessage.Text.Trim()))
@@ -928,11 +928,26 @@ namespace LAWC
 
             if (cbSensor.SelectedItem.ToString().ToUpper(CultureInfo.InvariantCulture).Contains("WEATHER"))
             {
-                numCheckSeconds.Minimum = FrmMain.MinimumWeatherUpdateSeconds;
-                if (numCheckSeconds.Value < FrmMain.MinimumWeatherUpdateSeconds)
+                //numCheckSeconds.Minimum = Setting.MinimumWeatherUpdateSeconds;
+                
+                // if user has own key
+                if (parentForm.parentForm.settings.HasOwnWeatherKey())//(!String.IsNullOrEmpty(parentForm.parentForm.settings.OpenWeatherAPIKey.Trim()))
                 {
-                    numCheckSeconds.Value = FrmMain.MinimumWeatherUpdateSeconds;
+                    numCheckSeconds.Minimum = Setting.MinimumWeatherUpdateSecondsHasKey;
+                    if (numCheckSeconds.Value < Setting.MinimumWeatherUpdateSecondsHasKey)
+                    {
+                        numCheckSeconds.Value = Setting.MinimumWeatherUpdateSecondsHasKey;
+                    }
+                } else
+                {
+                    numCheckSeconds.Minimum = Setting.MinimumWeatherUpdateSeconds;
+                    if (numCheckSeconds.Value < Setting.MinimumWeatherUpdateSeconds)
+                    {
+                        numCheckSeconds.Value = Setting.MinimumWeatherUpdateSeconds;
+                    }
                 }
+                
+                
             }
         }
 

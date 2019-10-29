@@ -182,6 +182,7 @@
             this.toolTip1.SetToolTip(this.cbTitleCase, "Make the first character of each word a capital letter.\r\n\r\neg. this is the title " +
         "   ==>>    This Is The Title");
             this.cbTitleCase.UseVisualStyleBackColor = true;
+            this.cbTitleCase.CheckedChanged += new System.EventHandler(this.cbTitleCase_CheckedChanged);
             // 
             // toolTip1
             // 

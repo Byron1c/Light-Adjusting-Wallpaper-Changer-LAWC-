@@ -629,6 +629,7 @@ namespace LAWC
             this.lblCityFound.Text = "Found: " + parentForm.settings.LocationPreset.ToString(CultureInfo.InvariantCulture);
             this.cbMultiMonitorMode.SelectedItem = this.parentForm.settings.MultiMonitorMode.ToString();
             this.cbCheckSensorsOnStartup.Checked = this.parentForm.settings.CheckSensorsOnStartup;
+            this.txtOpenWeatherAPIKey.Text = parentForm.settings.OpenWeatherAPIKey;
 
             this.cbKey1.SelectedItem = this.parentForm.settings.ShortcutKey1;
             this.cbKey2.SelectedItem = this.parentForm.settings.ShortcutKey2;
@@ -638,6 +639,7 @@ namespace LAWC
             this.cbUseSunriseSunset.Checked = this.parentForm.settings.UseSunriseSunset;
             this.cbUseSunriseSunset2.Checked = this.parentForm.settings.UseSunriseSunset;
 
+            this.txtOpenWeatherAPIKey.Text = this.parentForm.settings.OpenWeatherAPIKey;
             numImageSizeScalePercent.Value = (int)(this.parentForm.settings.ImageSizeScalePercent);
 
             String aspect = string.Empty;
@@ -2563,6 +2565,11 @@ namespace LAWC
 
         private void btnRefreshHWSensors_Click(object sender, EventArgs e)
         {
+            RefreshSensors();
+        }
+
+        private void RefreshSensors()
+        {
             txtHardwareSensorsFound.Enabled = false;
             btnRefreshHWSensors.Enabled = false;
             parentForm.initHardwareSensors(false, false, false);
@@ -3123,6 +3130,57 @@ namespace LAWC
                 SetUseSunriseSunset();
                 SetTimerState();
             }
+        }
+
+        private void llGetKey_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (MessageBox.Show("You will need to create an account on OpenWeatherMap.org,\n Then Click on API, and Subscribe to the Current Weather Data.\n\n"
+                + "Then, enter the new key in LAWC.\n\nThe Open Weather website will now be opened", "OpenWeather Key",
+                MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK) 
+            {
+                OpenOpenWeatherMapURL();
+            }
+        }
+
+        private void txtOpenWeatherAPIKey_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnSetOpenWeather_Click(object sender, EventArgs e)
+        {
+            parentForm.ShowWorkingMessage();
+
+            if (txtOpenWeatherAPIKey.Text.Replace(" ", "").Length >= 32)
+            {
+                parentForm.settings.OpenWeatherAPIKey = txtOpenWeatherAPIKey.Text.Replace(" ", "").Substring(0, 32); // its a 32 character string for the key
+                RefreshSensors();
+                parentForm.AdjustDesktopImages();
+            } else if (txtOpenWeatherAPIKey.Text.Trim().Length == 0)
+            {
+                parentForm.settings.OpenWeatherAPIKey = Constants.OpenWeatherAPIKey; // its a 32 character string for the key
+                RefreshSensors();
+                parentForm.AdjustDesktopImages();
+            }
+            else
+            {
+                MessageBox.Show("Sorry, that key is invalid. It must be 32 characters long.", "LAWC Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            parentForm.HideWorkingMessage();
+
+        }
+
+        private void btnClearOpenWeatherKey_Click(object sender, EventArgs e)
+        {
+            parentForm.ShowWorkingMessage();
+
+            txtOpenWeatherAPIKey.Text = string.Empty;
+            parentForm.settings.OpenWeatherAPIKey = Constants.OpenWeatherAPIKey; // its a 32 character string for the key
+            RefreshSensors();
+            parentForm.AdjustDesktopImages();
+
+            parentForm.HideWorkingMessage();
         }
     }
 }

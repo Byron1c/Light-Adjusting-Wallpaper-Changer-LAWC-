@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Screen 0");
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Screen 0");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSettingsAdvanced));
             this.pbPreviewImage = new System.Windows.Forms.PictureBox();
             this.lblAdjustmentFreq = new System.Windows.Forms.Label();
@@ -190,6 +190,11 @@
             this.tbBrightnessMax = new System.Windows.Forms.TrackBar();
             this.lblBrightnessMax = new System.Windows.Forms.Label();
             this.tabLocation = new System.Windows.Forms.TabPage();
+            this.btnClearOpenWeatherKey = new System.Windows.Forms.Button();
+            this.btnSetOpenWeatherKey = new System.Windows.Forms.Button();
+            this.llGetKey = new System.Windows.Forms.LinkLabel();
+            this.label32 = new System.Windows.Forms.Label();
+            this.txtOpenWeatherAPIKey = new System.Windows.Forms.TextBox();
             this.lblCityFound = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
             this.btnSetLocation = new System.Windows.Forms.Button();
@@ -1053,7 +1058,7 @@
             // 
             this.lvScreenScales.HideSelection = false;
             this.lvScreenScales.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem3});
             this.lvScreenScales.Location = new System.Drawing.Point(16, 260);
             this.lvScreenScales.Name = "lvScreenScales";
             this.lvScreenScales.Size = new System.Drawing.Size(120, 58);
@@ -2527,6 +2532,11 @@
             // 
             // tabLocation
             // 
+            this.tabLocation.Controls.Add(this.btnClearOpenWeatherKey);
+            this.tabLocation.Controls.Add(this.btnSetOpenWeatherKey);
+            this.tabLocation.Controls.Add(this.llGetKey);
+            this.tabLocation.Controls.Add(this.label32);
+            this.tabLocation.Controls.Add(this.txtOpenWeatherAPIKey);
             this.tabLocation.Controls.Add(this.lblCityFound);
             this.tabLocation.Controls.Add(this.label50);
             this.tabLocation.Controls.Add(this.btnSetLocation);
@@ -2552,6 +2562,61 @@
             this.tabLocation.TabIndex = 4;
             this.tabLocation.Text = "Location";
             this.tabLocation.UseVisualStyleBackColor = true;
+            // 
+            // btnClearOpenWeatherKey
+            // 
+            this.btnClearOpenWeatherKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearOpenWeatherKey.Location = new System.Drawing.Point(285, 270);
+            this.btnClearOpenWeatherKey.Name = "btnClearOpenWeatherKey";
+            this.btnClearOpenWeatherKey.Size = new System.Drawing.Size(36, 23);
+            this.btnClearOpenWeatherKey.TabIndex = 189;
+            this.btnClearOpenWeatherKey.Text = "X";
+            this.toolTip1.SetToolTip(this.btnClearOpenWeatherKey, "Clear the Openweather API Key you have entered");
+            this.btnClearOpenWeatherKey.UseVisualStyleBackColor = true;
+            this.btnClearOpenWeatherKey.Click += new System.EventHandler(this.btnClearOpenWeatherKey_Click);
+            // 
+            // btnSetOpenWeatherKey
+            // 
+            this.btnSetOpenWeatherKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSetOpenWeatherKey.Location = new System.Drawing.Point(243, 270);
+            this.btnSetOpenWeatherKey.Name = "btnSetOpenWeatherKey";
+            this.btnSetOpenWeatherKey.Size = new System.Drawing.Size(36, 23);
+            this.btnSetOpenWeatherKey.TabIndex = 188;
+            this.btnSetOpenWeatherKey.Text = "Set";
+            this.toolTip1.SetToolTip(this.btnSetOpenWeatherKey, "Set the Open Weather API Key you have entered");
+            this.btnSetOpenWeatherKey.UseVisualStyleBackColor = true;
+            this.btnSetOpenWeatherKey.Click += new System.EventHandler(this.btnSetOpenWeather_Click);
+            // 
+            // llGetKey
+            // 
+            this.llGetKey.AutoSize = true;
+            this.llGetKey.ForeColor = System.Drawing.Color.Salmon;
+            this.llGetKey.LinkColor = System.Drawing.Color.Coral;
+            this.llGetKey.Location = new System.Drawing.Point(193, 254);
+            this.llGetKey.Name = "llGetKey";
+            this.llGetKey.Size = new System.Drawing.Size(45, 13);
+            this.llGetKey.TabIndex = 187;
+            this.llGetKey.TabStop = true;
+            this.llGetKey.Text = "Get Key";
+            this.llGetKey.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llGetKey_LinkClicked);
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(12, 254);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(115, 13);
+            this.label32.TabIndex = 186;
+            this.label32.Text = "OpenWeather API Key";
+            // 
+            // txtOpenWeatherAPIKey
+            // 
+            this.txtOpenWeatherAPIKey.Location = new System.Drawing.Point(15, 270);
+            this.txtOpenWeatherAPIKey.MaxLength = 32;
+            this.txtOpenWeatherAPIKey.Name = "txtOpenWeatherAPIKey";
+            this.txtOpenWeatherAPIKey.Size = new System.Drawing.Size(222, 20);
+            this.txtOpenWeatherAPIKey.TabIndex = 185;
+            this.txtOpenWeatherAPIKey.TextChanged += new System.EventHandler(this.txtOpenWeatherAPIKey_TextChanged);
             // 
             // lblCityFound
             // 
@@ -2646,7 +2711,7 @@
             // btnWeatherReport
             // 
             this.btnWeatherReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWeatherReport.Location = new System.Drawing.Point(70, 259);
+            this.btnWeatherReport.Location = new System.Drawing.Point(70, 311);
             this.btnWeatherReport.Name = "btnWeatherReport";
             this.btnWeatherReport.Size = new System.Drawing.Size(151, 23);
             this.btnWeatherReport.TabIndex = 176;
@@ -3533,5 +3598,10 @@
         internal System.Windows.Forms.CheckBox cbStartMinimized;
         internal System.Windows.Forms.CheckBox cbChangeOnStartup;
         internal System.Windows.Forms.CheckBox cbShowSplash;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TextBox txtOpenWeatherAPIKey;
+        private System.Windows.Forms.LinkLabel llGetKey;
+        private System.Windows.Forms.Button btnSetOpenWeatherKey;
+        private System.Windows.Forms.Button btnClearOpenWeatherKey;
     }
 }

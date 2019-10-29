@@ -1,0 +1,27 @@
+// Note: Email set to use SSL 
+        internal const String EmailAccountUser = "tgrowden@gmail.com";
+        internal const String EmailAccountPass = "dubluekbyhxwhskm";
+        internal const String EmailSMTP = "smtp.gmail.com";
+        internal const int EmailSMTPPort = 587;
+
+        internal const String ErrorFromEmail = "tgrowden@gmail.com";
+        internal const String ErrorToEmail = "troy@strangetimez.com";
+
+        internal const String OpenWeatherAPIKey = "10c57f3868d135d48fa9e22acdcdeaf7";
+		
+		
+		
+		
+		
+		
+        //TODO: Set these values for your own email account and OpenWeather API Key
+        // Note: Email set to use SSL 
+        internal const String EmailAccountUser = "{email account username}"; //eg myemail@here.com
+        internal const String EmailAccountPass = "{email account password}"; //eg abcdef1234!@# 
+        internal const String EmailSMTP = "{SMTP Server Address}"; //eg smtp.gmail.com
+        internal const int EmailSMTPPort = 587;
+
+        internal const String ErrorFromEmail = "{From email address}"; //eg myemail@here.com
+        internal const String ErrorToEmail = "{To email address}"; //eg myemail@here.com
+
+        internal static String OpenWeatherAPIKey = "{your OpenWeather API Key}"; //get from https://openweathermap.org/appid

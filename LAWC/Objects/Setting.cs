@@ -858,12 +858,29 @@ namespace LAWC.Common
             set { checkSensorsOnStartup = value; }
         }
 
+
+        private String openWeatherAPIKey;
+        public String OpenWeatherAPIKey
+        {
+            get { return openWeatherAPIKey; }
+            set { openWeatherAPIKey = value; }
+        }
+
+
+        /// <summary>
+        /// How many seconds is the lowest that users can set Weather sensors. 
+        /// Set to 30 mins so that we dont overload the free OpenWeather service as much
+        /// </summary>
+        internal const int MinimumWeatherUpdateSeconds = 900; //15 mins
+        internal const int MinimumWeatherUpdateSecondsHasKey = 60;
+
+        private FrmMain parentForm;
 #endregion
 
 
-        public Setting()
+        public Setting(FrmMain vParentForm)
         {
-
+            parentForm = vParentForm;
             Initialise();
 
         }
@@ -966,6 +983,8 @@ namespace LAWC.Common
             ShortcutKey1 = "Control";
             ShortcutKey2 = "Alt";
             ShortcutKey3 = "C";
+
+            OpenWeatherAPIKey = string.Empty;
         }
 
 
@@ -1365,6 +1384,22 @@ namespace LAWC.Common
 
         }
 
+        internal Boolean HasOwnWeatherKey()//String vKey)
+        {
+            if (OpenWeatherAPIKey == Constants.OpenWeatherAPIKey)
+            {
+                return false;
+            }
+            else if (String.IsNullOrEmpty(OpenWeatherAPIKey))
+            {
+                return false;
+            }
+            else if (OpenWeatherAPIKey.Length != 32)
+            {
+                return false;
+            }
+            return true; 
+        }
 
         internal void RemoveEvent(String vFile, CheckActionType vAction, String vSensorName, String vMessage)
         {
@@ -2043,7 +2078,11 @@ namespace LAWC.Common
                         {
                             vSetting.ShortcutKey3 = dr["Value"].ToString();
                         }
-
+                        if (dr["Setting"].ToString() == "OpenWeatherAPIKey")
+                        {
+                            vSetting.OpenWeatherAPIKey = dr["Value"].ToString();
+                        }
+                        
                         //if (dr["Setting"].ToString() == "LatDirection")
                         //{
                         //    vSetting.LatDirection = dr["Value"].ToString();
@@ -2285,6 +2324,9 @@ namespace LAWC.Common
             dtConfig.Rows.Add("ShortcutKey1", vSetting.ShortcutKey1);
             dtConfig.Rows.Add("ShortcutKey2", vSetting.ShortcutKey2);
             dtConfig.Rows.Add("ShortcutKey3", vSetting.ShortcutKey3);
+
+            dtConfig.Rows.Add("OpenWeatherAPIKey", vSetting.OpenWeatherAPIKey);
+            
 
             // Add the table
             dsMain.Tables.Add(dtConfig);
@@ -2744,10 +2786,18 @@ namespace LAWC.Common
                         };
 
                         Sensor.SensorSource source = Sensor.getSensorSource(item.SensorName);
-                        // stop weather from updateing too much, even if manually set from the settings file
-                        if (item.CheckSeconds < MinimumWeatherUpdateSeconds && source == Sensor.SensorSource.Weather) //item.SensorName.ToUpperInvariant().Contains("WEATHER"))
+
+                        int updateSeconds = MinimumWeatherUpdateSeconds;
+                        //if user has a key, then let them update more often
+                        if (!String.IsNullOrEmpty(vSetting.OpenWeatherAPIKey))
                         {
-                            item.CheckSeconds = MinimumWeatherUpdateSeconds;
+                            updateSeconds = MinimumWeatherUpdateSecondsHasKey;
+                        }
+
+                        // stop weather from updateing too much, even if manually set from the settings file
+                        if (item.CheckSeconds < updateSeconds && source == Sensor.SensorSource.Weather) //item.SensorName.ToUpperInvariant().Contains("WEATHER"))
+                        {
+                            item.CheckSeconds = updateSeconds;
                         }
                         else if (item.CheckSeconds < MinimumSensorUpdateSeconds)
                         {

@@ -441,13 +441,18 @@ namespace LAWC
 
         private void txtNewFilename_TextChanged(object sender, EventArgs e)
         {
+            parseFilename();
+        }
+
+        private void parseFilename()
+        {
             int pos = txtNewFilename.SelectionStart;//MainFunctions.GetCaretPoint(txtNewFilename).X;
 
             //txtNewFilename.Text = txtNewFilename.Text.Trim();
             txtNewFilename.Text = RemoveInvalidCharacters(txtNewFilename.Text);
             doCamelCase();
 
-            txtNewFilename.SelectionStart = pos;            
+            txtNewFilename.SelectionStart = pos;
         }
 
 
@@ -462,6 +467,11 @@ namespace LAWC
                 txtNewFilename.SelectionStart = newText.Length;
                 txtNewFilename.SelectionLength = 0;
             }
+        }
+
+        private void cbTitleCase_CheckedChanged(object sender, EventArgs e)
+        {
+            parseFilename();
         }
         //protected override void WndProc(ref Message message)
         //{

@@ -123,11 +123,7 @@ namespace LAWC
         /// </summary>
         internal const int pingTimeout = 500;
 
-        /// <summary>
-        /// How many seconds is the lowest that users can set Weather sensors. 
-        /// Set to 2 mins so that we dont overload the free OpenWeather service as much
-        /// </summary>
-        internal const int MinimumWeatherUpdateSeconds = 120;
+
 
         /// <summary>
         /// How many seconds is the lowest users can set for NON WEATHER sensors
@@ -314,6 +310,15 @@ namespace LAWC
         public FrmMain(string[] args)
         {
             InitializeComponent();
+
+            // keep settings when reinstalled / updated / uninstall
+            //https://stackoverflow.com/questions/3779307/how-to-keep-user-settings-on-uninstall
+            if (Properties.Settings.Default.UpgradeRequired)
+            {
+                Properties.Settings.Default.Upgrade();
+                Properties.Settings.Default.UpgradeRequired = false;
+                Properties.Settings.Default.Save();
+            }
 
             try
             {
@@ -514,7 +519,7 @@ namespace LAWC
 
         private void LoadSettings(String vSettingsPath = "")
         {
-            settings = new Setting();
+            settings = new Setting(this);
 
             try
             {
@@ -594,6 +599,7 @@ namespace LAWC
             
         }
 
+        
         /// <summary>
         /// Redraws / updates the splash screen information
         /// </summary>
@@ -1348,8 +1354,35 @@ namespace LAWC
                     else
                     {
                         // a location is set
+                        float value = getSensorValue("Temperature", SensorType.Temperature, string.Empty, out string textData); // txtValue.Text
+                        if (String.IsNullOrEmpty(textData.Trim()) && value != 0)
+                        {
+                            output += String.Format(CultureInfo.InvariantCulture, "Weather Sensor Test: OK") + System.Environment.NewLine;
+                        } else
+                        {
+                            output += String.Format(CultureInfo.InvariantCulture, "Weather Sensor Test: (PROBLEM) {0}", textData) + System.Environment.NewLine;
+                            output += String.Format(CultureInfo.InvariantCulture, "Sensors available: NONE" + System.Environment.NewLine);
+                        }
 
+                        if (settings.HasOwnWeatherKey())
+                        {
+                            output += String.Format(CultureInfo.InvariantCulture, "Weather Sensor using your own OpenWeather Key", textData) + System.Environment.NewLine;
+                        } else
+                        {
+                            output += String.Format(CultureInfo.InvariantCulture, "Weather Sensor using the Default OpenWeather Key", textData) + System.Environment.NewLine;
+                        }
+
+                        if (String.IsNullOrEmpty(textData.Trim()) && value != 0)
+                        {
+                            output += System.Environment.NewLine;
+                            output += String.Format(CultureInfo.InvariantCulture, "Sensors available:" + System.Environment.NewLine);
+                        }
                         var weatherSensorCount = Enum.GetNames(typeof(OpenWeatherAPI.OpenWeatherAPI.WeatherSensors)).Length;
+                        
+                        //if the key is invalid, dont list the sensors
+                        if ((textData.Trim().Equals("[Server is Overloaded]") || textData.Trim().Equals("[Invalid Key]")) 
+                            && value == 0) weatherSensorCount = -1;
+
                         for (int j = 0; j < weatherSensorCount; j++)
                         {
                             // Add in Weather
@@ -1427,21 +1460,27 @@ namespace LAWC
                                 )
                             {
                                 HWSensors.Add(sWeather);
-                                output += String.Format(CultureInfo.InvariantCulture, "Weather {0}:  {1}", sWeather.Name, sWeather.Value) + System.Environment.NewLine;
+                                //output += String.Format(CultureInfo.InvariantCulture, "Weather {0}:  {1}", sWeather.Name, sWeather.Value) + System.Environment.NewLine;
+                                output += String.Format(CultureInfo.InvariantCulture, "Weather {0}", sWeather.Name) + System.Environment.NewLine;
                             }
                         }
 
-                        // manually add in entry for Wind Speed KpH
-                        SensorSummary ss = new SensorSummary();
-                        double windSpeedKPH = 0;
-                        windSpeedKPH = Math.Round((windSpeedKPH * 60 * 60) / 1000f, 2);
-                        ss.Name = "WindSpeedKPH";
-                        ss.DataType = SensorType.Clock;
-                        ss.Value = windSpeedKPH;
-                        ss.Category = SensorSource.Weather;
-                        HWSensors.Add(ss);
-                        output += String.Format(CultureInfo.InvariantCulture, "Weather {0}:  {1}", "WindSpeedKPH", windSpeedKPH) + System.Environment.NewLine;
-                        output += System.Environment.NewLine;
+                        if (weatherSensorCount != -1)
+                        {
+                            // manually add in entry for Wind Speed KpH
+                            SensorSummary ss = new SensorSummary();
+                            double windSpeedKPH = 0;
+                            windSpeedKPH = Math.Round((windSpeedKPH * 60 * 60) / 1000f, 2);
+                            ss.Name = "WindSpeedKPH";
+                            ss.DataType = SensorType.Clock;
+                            ss.Value = windSpeedKPH;
+                            ss.Category = SensorSource.Weather;
+                            HWSensors.Add(ss);
+
+                            output += String.Format(CultureInfo.InvariantCulture, "Weather {0}", "WindSpeedKPH") + System.Environment.NewLine;
+                            output += System.Environment.NewLine;
+                        }
+                        
                     }
                 }
                 else
@@ -1497,6 +1536,8 @@ namespace LAWC
         }
 
 
+        
+
         internal object getCurrentSensorValue(String vName, SensorType vType, Object vData)
         {
             object value = string.Empty;
@@ -1529,20 +1570,37 @@ namespace LAWC
                                 {
                                     // try and find the location from the gps coords
                                     WeatherSensors ws = getWeatherSensorName(name);
-                                    value = OpenWeatherAPI.OpenWeatherAPI.GetWeatherValue(
-                                        settings.Latitude, settings.Longitude,
-                                        ws,
-                                        Constants.OpenWeatherAPIKey);
+                                    if (settings.HasOwnWeatherKey())
+                                    {
+                                        value = OpenWeatherAPI.OpenWeatherAPI.GetWeatherValue(
+                                            settings.Latitude, settings.Longitude,
+                                            ws,
+                                            settings.OpenWeatherAPIKey.Trim());
+                                    }
+                                    else
+                                    {
+                                        value = OpenWeatherAPI.OpenWeatherAPI.GetWeatherValue(
+                                            settings.Latitude, settings.Longitude,
+                                            ws,
+                                            Constants.OpenWeatherAPIKey);
+                                    }
                                 }
                                 catch (ArithmeticException)
                                 {
                                     // location isnt valid
                                     value = string.Empty;
                                 }
-                                catch (System.Net.WebException)
+                                catch (System.Net.WebException ex)
                                 {
-                                    // server overloaded probably
-                                    value = string.Empty;
+                                    if (ex.Message.Contains("(401)") && ex.Message.Contains("Unauthorized")) //{"The remote server returned an error: (401) Unauthorized."}
+                                    {
+                                        value = "[Invalid Key]";//string.Empty;
+                                    }
+                                    else
+                                    {
+                                        // server overloaded probably
+                                        value = "[Server is Overloaded]";//string.Empty;
+                                    }
                                 }
                                 catch (NullReferenceException)
                                 {
@@ -1700,8 +1758,30 @@ namespace LAWC
                 {
                     if (!string.IsNullOrEmpty(val.ToString()))
                     {
-                        currentValue = float.Parse(val.ToString(), CultureInfo.InvariantCulture);
-                        vTextData = string.Empty;
+                        //Boolean result = float.TryParse(val.ToString(), out currentValue);
+                        //currentValue = float.Parse(val.ToString(), CultureInfo.InvariantCulture);
+                        //vTextData = string.Empty;
+
+                        if (val.ToString() == "[Server is Overloaded]" || val.ToString() == "[Invalid Key]")
+                        {
+                            vTextData = val.ToString();
+                            currentValue = 0;
+                        } else
+                        {
+                            Boolean result = float.TryParse(val.ToString(), out currentValue);
+                            if (result)
+                            {
+                                currentValue = float.Parse(val.ToString(), CultureInfo.InvariantCulture);
+                                vTextData = string.Empty;
+                            }
+                            else
+                            {
+                                currentValue = 0;
+                                vTextData = val.ToString();
+                            }
+                        }
+
+                        
                     }
                     else
                     {
@@ -2209,8 +2289,23 @@ namespace LAWC
             }
             else
             {
-                // everything else 
-                output = output.Replace("<<Value>>", value.ToString(CultureInfo.InvariantCulture));
+                if (vTextDataResult == "[Server is Overloaded]")
+                {
+                    // 
+                    output = output.Replace("<<Value>>", vTextDataResult.ToString(CultureInfo.InvariantCulture));
+                }
+                else if (vTextDataResult == "[Invalid Key]")
+                {
+                    // 
+                    output = output.Replace("<<Value>>", vTextDataResult.ToString(CultureInfo.InvariantCulture));
+                }
+                else
+                {
+                    // everything else 
+                    output = output.Replace("<<Value>>", value.ToString(CultureInfo.InvariantCulture));
+                }
+
+                
             }
 
             output = output.Replace("<<Time>>", DateTime.Now.ToString("HH:mm", CultureInfo.InvariantCulture));
@@ -5454,6 +5549,7 @@ namespace LAWC
             {
                 lblWorkingImages.Invoke((Action)delegate
                 {
+                    Cursor.Current = Cursors.WaitCursor;
                     lblWorkingImages.Visible = true;
                     lblWorkingImages.Refresh();
 
@@ -5468,6 +5564,7 @@ namespace LAWC
             }
             else
             {
+                Cursor.Current = Cursors.WaitCursor;
                 lblWorkingImages.Visible = true;
                 lblWorkingImages.BringToFront();
                 lblWorkingImages.Refresh();
@@ -5519,6 +5616,8 @@ namespace LAWC
                         olvImages.RefreshOverlays();
                         olvFolders.RefreshOverlays();
 
+                        Cursor.Current = Cursors.Default;
+
                     });
                 }
                 else
@@ -5532,6 +5631,8 @@ namespace LAWC
                     this.olvFolders.UseOverlays = false;
                     olvImages.RefreshOverlays();
                     olvFolders.RefreshOverlays();
+
+                    Cursor.Current = Cursors.Default;
                 }
 
                 if (frmSettingsAdvanced != null)
@@ -7720,6 +7821,19 @@ namespace LAWC
             try
             {
                 System.Diagnostics.Process.Start("http://www.strangetimez.com/Blog/?page_id=478");
+            }
+            catch (System.Net.WebException)
+            {
+                // do nothing
+            }
+
+        }
+
+        internal static void OpenOpenWeatherMapURL()
+        {
+            try
+            {
+                System.Diagnostics.Process.Start("https://openweathermap.org/");
             }
             catch (System.Net.WebException)
             {

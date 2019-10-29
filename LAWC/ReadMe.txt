@@ -1,8 +1,8 @@
 ﻿
-LAWC 0.9.8.0 BETA
+LAWC 0.9.9.1 BETA
 =====================================================================
 Light Adjusting Wallpaper Changer
-http://www.strangetimez.com/Blog/?page_id=478
+https://www.strangetimez.com/Blog/light-adjusting-wallpaper-changer-application/
 
 This FREE app is designed to enhance your wallpapers' display in Windows. It will display the images 
 in the way you want, how you want, and how often you want. You can filter images by brightness, size, 
@@ -152,6 +152,25 @@ of downloadable textures for tiling across your desktop.
 
 History
 =====================================================================
+0.9.9.0  2019-10-01    BETA.
+* MAJOR FIX: Issue with multiple screens / different DPI settings not displaying correctly is now FIXED!!
+* Improved preset dark settings to not look so terrible
+* Set the "working" messages to show until the wallpaper change is complete
+* Improved change speed during daylight hours
+* Faster overall startup and performance improvements
+* Fixed Reset Settings function issues
+* Added the log file to the email that can be sent when an error is found
+* Improved functionality in the Image Renaming tool
+* Fixed issues with error reporting
+* Updated to .NET 4.8
+
+
+0.9.8.1  2019-06-18    BETA.
+* More error handling
+* Minor UI Improvements
+* Updated to .NET 4.7.2
+
+
 0.9.8.0  2019-05-13    BETA.
 * Added HSV adjustment to wallpapers, making them bluer in light times, and more orange in dark times 
 * Improved / fixed borders in different wallpaper modes
@@ -161,6 +180,7 @@ History
 * Error handling for corrupted XML settings
 * Fixed inconsistencies in the image adjustment sliders in Advanced Settings
 * Interface and wizard cleanup, more error handling
+
 
 0.9.7.4  2019-04-06    BETA.
 * Editing wallpaper filenames in place is improved / fixed
@@ -172,6 +192,7 @@ History
 * Shortened the image/wallpaper xml tags to speed up loading and saving
 * Added "Internet Connection" availability, and "Website" check sensor (pings the server/website)
 
+
 0.9.7.3  2019-03-08    BETA.
 * What else... Many bug fixes!
 * Added ability to edit individual filenames "in place" (in the wallpaper list, with a second mouse click)
@@ -180,6 +201,7 @@ History
 * Added an setting option "Multi Monitor Wallpaper Display" - Same wallpaper on all screens, or Different wallpapers on each screen
 * Stopped errors incorrectly being logged with a fresh install, or reset settings
 * UI Cleanup
+
 
 0.9.7.2  2019-02-15    BETA.
 * Option to send error reports and notes via email
@@ -192,10 +214,12 @@ History
     -PortableOff  This will set LAWC to create and use a settings file in the %appdata% path
 * A bunch of minor UI and bug fixes
 
+
 0.9.7.1  2019-02-05	   BETA.
 * Fixed sorting on the wallpaper list
 * Cleanup of error messages
 * Improve the LAWC Mode and settings
+
 
 0.9.7.0  2019-01-27	   BETA.
 * UI cleanup and improvements, including "Working" messages
@@ -204,11 +228,13 @@ History
 * Added functionality to toggle Win10's Dark Mode and Transparency
 * Fixed wallpapers displaying incorrectly when using LAWC mode
 
+
 0.9.6.0  2019-01-01	   BETA.
 * Performance issues with displaying the Images list (ListView)
 * Converted LAWC to use OpenListView - faster and more features
 * App testing with new OpenListView
 * Performance issues with displaying/hiding main window - fixed.
+
 
 0.9.5.0  2018-12-18	   BETA.
 * Polishing interface, and cleaning up code
@@ -218,26 +244,32 @@ History
 0.9.2.0	 2018-11-27    BETA.
 * Numerous improvements and fixes
 
+
 0.9.1.0  2016-01-04    BETA.  
 * Stopped the Donate message from popping up
 * Hopefully fixed problem when changing the number of active screens
+
 
 0.9.0.9  2015-10-25    BETA.  
 * Added ability to blur edges of image
 * Cleaned up interface issues
 * Hopefully fixed a shutdown problem
 
+
 0.9.0.8  2015-08-22    BETA.  
 * Fixed problem with Brightness adjustments
 * Removed "Recent Images" history function (until its fixed)
 
+
 0.9.0.7  2015-05-29    BETA.  
 * Trying to fix repeating changing of wallpaper
+
 
 0.9.0.6  2014-09-10    BETA.  
 * Fixed Ordered Images Option
 * Added: Reset Settings
 * Added: Clear Recent History
+
 
 0.1.0.0  2014-06-17  
 * Started

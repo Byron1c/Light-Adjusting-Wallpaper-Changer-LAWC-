@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Threading;
 using System.Reflection;
 using System.IO;
-
+using System.Runtime.CompilerServices;
 
 namespace LAWC.Common
 {
@@ -36,6 +36,7 @@ namespace LAWC.Common
                 // and location. Also check that the process has a valid
                 // window handle in this session to filter out other user's
                 // processes.
+
                 if (_process.Id != process.Id &&
                     _process.MainModule.FileName == process.MainModule.FileName &&
                     _process.MainWindowHandle != IntPtr.Zero)
@@ -46,6 +47,7 @@ namespace LAWC.Common
             }
             return hWnd;
         }
+
 
 
         /// <summary>
