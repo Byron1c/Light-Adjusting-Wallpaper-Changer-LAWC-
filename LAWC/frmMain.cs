@@ -2311,7 +2311,7 @@ namespace LAWC
             output = output.Replace("<<Time>>", DateTime.Now.ToString("HH:mm", CultureInfo.InvariantCulture));
             output = output.Replace("<<Date>>", DateTime.Now.ToString("yyyy/MM/dd", CultureInfo.InvariantCulture));
             output = output.Replace("<<DateTime>>", DateTime.Now.ToString("yyyy/MM/dd HH:mm", CultureInfo.InvariantCulture));
-            output = output.Replace("<<Filename>>", settings.Images[vIndexWallpaper].Filename);
+            if (vIndexWallpaper >= 0 && vIndexWallpaper < settings.Images.Count) output = output.Replace("<<Filename>>", settings.Images[vIndexWallpaper].Filename);
 
             if (output.ToUpperInvariant().Contains("<<META_"))
             {
@@ -4055,6 +4055,13 @@ namespace LAWC
             {
                 file = wallpaperFilenames[i];
                 int wallpaperIndex = settings.Images.FindIndex(r => file.Contains(r.FullPath));
+
+                // if not a valid index
+                if (wallpaperIndex == -1)
+                {
+                    return 0;
+                }
+
                 if (settings.Images[wallpaperIndex].Width / bounds.Width > 1
                     && settings.Images[wallpaperIndex].Height / bounds.Height <= 1
                     )
