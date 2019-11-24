@@ -642,7 +642,14 @@ namespace LAWC
             this.txtOpenWeatherAPIKey.Text = this.parentForm.settings.OpenWeatherAPIKey;
             numImageSizeScalePercent.Value = (int)(this.parentForm.settings.ImageSizeScalePercent);
 
-            String aspect = string.Empty;
+            if (parentForm.OSVersion != 10)
+            {
+                lblWinDarkMode.Visible = false;
+                lblWinTransparency.Visible = false;
+                lblDisplatSettings.Visible = false;
+            }
+
+                String aspect = string.Empty;
             for (int i = 0; i < Screen.AllScreens.Length; i++)
             {
                 int x = Screen.AllScreens[i].Bounds.Width;
@@ -2960,11 +2967,15 @@ namespace LAWC
 
         private void toggleWinDarkMode()
         {
-            Boolean darkModeEnabled = ScreenFunctions.isWinDarkModeEnabled();
-            darkModeEnabled = !darkModeEnabled; //toggle
-            ScreenFunctions.SetWindowsDarkMode(darkModeEnabled);
-            setWinDarkModeText(darkModeEnabled);
-            parentForm.SetInterfaceColour();
+            if (parentForm.OSVersion == 10)
+            {
+                Boolean darkModeEnabled = ScreenFunctions.isWinDarkModeEnabled();
+                darkModeEnabled = !darkModeEnabled; //toggle
+                ScreenFunctions.SetWindowsDarkMode(darkModeEnabled);
+                setWinDarkModeText(darkModeEnabled);
+                parentForm.SetInterfaceColour();
+            } 
+            
         }
 
         private void setWinDarkModeText(Boolean vDarkModeEnabled)

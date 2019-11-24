@@ -135,6 +135,8 @@ namespace LAWC
 
         #region Variables
 
+        internal int OSVersion = -1;
+
         /// <summary>
         /// used to time how long the rescan takes to process the found image list
         /// </summary>
@@ -637,6 +639,39 @@ namespace LAWC
             this.frmSettingsAdvanced.SetScreenImageCheckBoxes();
 
             applyingSettings = false;
+        }
+
+        /// <summary>
+        /// capture and display what version of windows is running
+        /// </summary>
+        private void setOSInfo()
+        {
+            string OSName;
+            try
+            {
+                OSName = MainFunctions.getOSName();
+            }
+            catch (System.Security.SecurityException ex)
+            {
+                OSName = "Windows 10"; //ASSUME: Windows 10
+                ProcessError(ex, ErrorMessageType.UnknownDataRead, false, false, String.Format(CultureInfo.InvariantCulture, ""), Setting.getSettingsFullPath(Properties.Settings.Default.Portable));
+            }
+
+            if (OSName.StartsWith("Windows 10"))
+            {
+                OSVersion = 10;
+            }
+            if (OSName.StartsWith("Windows 8"))
+            {
+                OSVersion = 8;
+            }
+            if (OSName.StartsWith("Windows 7"))
+            {
+                OSVersion = 7;
+            }
+
+            //lblOS.Text = OSName;
+
         }
 
         /// <summary>
@@ -2311,7 +2346,8 @@ namespace LAWC
             output = output.Replace("<<Time>>", DateTime.Now.ToString("HH:mm", CultureInfo.InvariantCulture));
             output = output.Replace("<<Date>>", DateTime.Now.ToString("yyyy/MM/dd", CultureInfo.InvariantCulture));
             output = output.Replace("<<DateTime>>", DateTime.Now.ToString("yyyy/MM/dd HH:mm", CultureInfo.InvariantCulture));
-            if (vIndexWallpaper >= 0 && vIndexWallpaper < settings.Images.Count) output = output.Replace("<<Filename>>", settings.Images[vIndexWallpaper].Filename);
+            if (vIndexWallpaper >= 0 && vIndexWallpaper < settings.Images.Count) 
+                output = output.Replace("<<Filename>>", settings.Images[vIndexWallpaper].Filename);
 
             if (output.ToUpperInvariant().Contains("<<META_"))
             {
@@ -3224,7 +3260,7 @@ namespace LAWC
                     {
                         if (System.IO.File.Exists(wallpaperFilenames[i].ToString(CultureInfo.InvariantCulture)) == false)
                         {
-                            ProcessError(null, ErrorMessageType.FileDoesntExist, true, false, String.Format(CultureInfo.InvariantCulture, "File Doesnt Exist: " + wallpaperFilenames[i].ToString(CultureInfo.InvariantCulture)), Setting.getSettingsFullPath(Properties.Settings.Default.Portable));
+                            ProcessError(null, ErrorMessageType.FileDoesntExist, false, false, String.Format(CultureInfo.InvariantCulture, "File Doesnt Exist: " + wallpaperFilenames[i].ToString(CultureInfo.InvariantCulture)), Setting.getSettingsFullPath(Properties.Settings.Default.Portable));
                             return output;
                         }
                     }
@@ -6399,7 +6435,7 @@ namespace LAWC
                             new System.Windows.Forms.ToolStripItem[]
                         { selectCurrent });
 
-                    ;
+                    
                     count++;
 
                 }

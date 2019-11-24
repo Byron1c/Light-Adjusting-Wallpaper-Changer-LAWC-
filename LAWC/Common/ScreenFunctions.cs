@@ -23,6 +23,12 @@ namespace LAWC.Common
 
             rkApp = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Themes\Personalize", true);
 
+            if (rkApp == null)
+            {
+                output = false;
+                return output;
+            }
+
             if (rkApp.GetValue("EnableTransparency") == null)
             {
                 // The value doesn't exist, so Light Mode by default
@@ -151,6 +157,11 @@ namespace LAWC.Common
             RegistryKey rkApp;
             rkApp = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Themes\Personalize", true);
 
+            if (rkApp == null)
+            {
+                return;
+            }
+
             //0 = Dark theme
             //1 = Light theme
 
@@ -184,6 +195,12 @@ namespace LAWC.Common
 
             rkApp = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Themes\Personalize", true);
 
+            if (rkApp == null)
+            {
+                output = false;
+                return output;
+            }
+
             if (rkApp.GetValue("AppsUseLightTheme") == null)
             {
                 // The value doesn't exist, so Light Mode by default
@@ -216,6 +233,11 @@ namespace LAWC.Common
             //CheckAutoRunState();
             RegistryKey rkApp;
             rkApp = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Themes\Personalize", true);
+
+            if (rkApp == null)
+            {
+                return;
+            }
 
             //0 = Dark theme
             //1 = Light theme

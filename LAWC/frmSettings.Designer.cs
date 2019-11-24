@@ -84,14 +84,22 @@
             this.cbMultiMonitorMode = new System.Windows.Forms.ComboBox();
             this.lblMultiMonDisplay = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.numWallpaperChangeMins)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numImageSizeScalePercent)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblImageTime
             // 
             this.lblImageTime.AutoSize = true;
-            this.lblImageTime.Location = new System.Drawing.Point(16, 97);
+            this.lblImageTime.Location = new System.Drawing.Point(28, 79);
             this.lblImageTime.Name = "lblImageTime";
             this.lblImageTime.Size = new System.Drawing.Size(160, 13);
             this.lblImageTime.TabIndex = 177;
@@ -99,11 +107,10 @@
             // 
             // cbCheckForUpdates
             // 
-            this.cbCheckForUpdates.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbCheckForUpdates.AutoSize = true;
             this.cbCheckForUpdates.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cbCheckForUpdates.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbCheckForUpdates.Location = new System.Drawing.Point(224, 12);
+            this.cbCheckForUpdates.Location = new System.Drawing.Point(233, 19);
             this.cbCheckForUpdates.Name = "cbCheckForUpdates";
             this.cbCheckForUpdates.Size = new System.Drawing.Size(164, 17);
             this.cbCheckForUpdates.TabIndex = 176;
@@ -116,7 +123,7 @@
             // 
             this.cbStartMinimized.AutoSize = true;
             this.cbStartMinimized.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cbStartMinimized.Location = new System.Drawing.Point(115, 12);
+            this.cbStartMinimized.Location = new System.Drawing.Point(103, 19);
             this.cbStartMinimized.Name = "cbStartMinimized";
             this.cbStartMinimized.Size = new System.Drawing.Size(97, 17);
             this.cbStartMinimized.TabIndex = 175;
@@ -130,7 +137,7 @@
             this.cbShowToolTips.AutoSize = true;
             this.cbShowToolTips.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cbShowToolTips.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbShowToolTips.Location = new System.Drawing.Point(16, 407);
+            this.cbShowToolTips.Location = new System.Drawing.Point(563, 18);
             this.cbShowToolTips.Name = "cbShowToolTips";
             this.cbShowToolTips.Size = new System.Drawing.Size(170, 17);
             this.cbShowToolTips.TabIndex = 174;
@@ -144,7 +151,7 @@
             this.cbAutoStart.AutoSize = true;
             this.cbAutoStart.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cbAutoStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbAutoStart.Location = new System.Drawing.Point(16, 12);
+            this.cbAutoStart.Location = new System.Drawing.Point(6, 19);
             this.cbAutoStart.Name = "cbAutoStart";
             this.cbAutoStart.Size = new System.Drawing.Size(70, 17);
             this.cbAutoStart.TabIndex = 173;
@@ -155,7 +162,7 @@
             // 
             // numWallpaperChangeMins
             // 
-            this.numWallpaperChangeMins.Location = new System.Drawing.Point(170, 70);
+            this.numWallpaperChangeMins.Location = new System.Drawing.Point(160, 56);
             this.numWallpaperChangeMins.Minimum = new decimal(new int[] {
             1,
             0,
@@ -175,7 +182,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(226, 72);
+            this.label11.Location = new System.Drawing.Point(216, 58);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(29, 13);
             this.label11.TabIndex = 171;
@@ -184,7 +191,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(16, 72);
+            this.label12.Location = new System.Drawing.Point(6, 58);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(148, 13);
             this.label12.TabIndex = 170;
@@ -193,7 +200,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(16, 43);
+            this.label10.Location = new System.Drawing.Point(6, 27);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(84, 13);
             this.label10.TabIndex = 169;
@@ -208,7 +215,7 @@
             "Ordered",
             "LowestViewCountOrdered",
             "LowestViewCountRandom"});
-            this.cbImageOrder.Location = new System.Drawing.Point(106, 40);
+            this.cbImageOrder.Location = new System.Drawing.Point(96, 24);
             this.cbImageOrder.Name = "cbImageOrder";
             this.cbImageOrder.Size = new System.Drawing.Size(162, 21);
             this.cbImageOrder.TabIndex = 168;
@@ -221,7 +228,7 @@
             this.pnlBackgroundColourDark.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(11)))), ((int)(((byte)(0)))));
             this.pnlBackgroundColourDark.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlBackgroundColourDark.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlBackgroundColourDark.Location = new System.Drawing.Point(180, 332);
+            this.pnlBackgroundColourDark.Location = new System.Drawing.Point(170, 100);
             this.pnlBackgroundColourDark.Name = "pnlBackgroundColourDark";
             this.pnlBackgroundColourDark.Size = new System.Drawing.Size(133, 34);
             this.pnlBackgroundColourDark.TabIndex = 197;
@@ -230,7 +237,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(180, 316);
+            this.label9.Location = new System.Drawing.Point(170, 84);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(91, 13);
             this.label9.TabIndex = 196;
@@ -253,7 +260,7 @@
             "45",
             "50",
             "55"});
-            this.cbDarkMin.Location = new System.Drawing.Point(269, 284);
+            this.cbDarkMin.Location = new System.Drawing.Point(259, 52);
             this.cbDarkMin.Name = "cbDarkMin";
             this.cbDarkMin.Size = new System.Drawing.Size(36, 21);
             this.cbDarkMin.TabIndex = 195;
@@ -264,7 +271,7 @@
             // lblStartTime
             // 
             this.lblStartTime.AutoSize = true;
-            this.lblStartTime.Location = new System.Drawing.Point(165, 287);
+            this.lblStartTime.Location = new System.Drawing.Point(155, 55);
             this.lblStartTime.Name = "lblStartTime";
             this.lblStartTime.Size = new System.Drawing.Size(56, 13);
             this.lblStartTime.TabIndex = 194;
@@ -299,7 +306,7 @@
             "21",
             "22",
             "23"});
-            this.cbDarkHour.Location = new System.Drawing.Point(227, 284);
+            this.cbDarkHour.Location = new System.Drawing.Point(217, 52);
             this.cbDarkHour.Name = "cbDarkHour";
             this.cbDarkHour.Size = new System.Drawing.Size(36, 21);
             this.cbDarkHour.TabIndex = 193;
@@ -312,7 +319,7 @@
             this.pnlBackgroundColourLight.BackColor = System.Drawing.Color.LightSkyBlue;
             this.pnlBackgroundColourLight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlBackgroundColourLight.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlBackgroundColourLight.Location = new System.Drawing.Point(19, 332);
+            this.pnlBackgroundColourLight.Location = new System.Drawing.Point(9, 100);
             this.pnlBackgroundColourLight.Name = "pnlBackgroundColourLight";
             this.pnlBackgroundColourLight.Size = new System.Drawing.Size(135, 34);
             this.pnlBackgroundColourLight.TabIndex = 192;
@@ -321,7 +328,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 316);
+            this.label4.Location = new System.Drawing.Point(6, 84);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 13);
             this.label4.TabIndex = 191;
@@ -330,7 +337,7 @@
             // lblEndTime
             // 
             this.lblEndTime.AutoSize = true;
-            this.lblEndTime.Location = new System.Drawing.Point(16, 287);
+            this.lblEndTime.Location = new System.Drawing.Point(6, 55);
             this.lblEndTime.Name = "lblEndTime";
             this.lblEndTime.Size = new System.Drawing.Size(56, 13);
             this.lblEndTime.TabIndex = 190;
@@ -353,7 +360,7 @@
             "45",
             "50",
             "55"});
-            this.cbLightMin.Location = new System.Drawing.Point(116, 284);
+            this.cbLightMin.Location = new System.Drawing.Point(106, 52);
             this.cbLightMin.Name = "cbLightMin";
             this.cbLightMin.Size = new System.Drawing.Size(36, 21);
             this.cbLightMin.TabIndex = 189;
@@ -390,7 +397,7 @@
             "21",
             "22",
             "23"});
-            this.cbLightHour.Location = new System.Drawing.Point(74, 284);
+            this.cbLightHour.Location = new System.Drawing.Point(64, 52);
             this.cbLightHour.Name = "cbLightHour";
             this.cbLightHour.Size = new System.Drawing.Size(36, 21);
             this.cbLightHour.TabIndex = 188;
@@ -408,7 +415,7 @@
             "Much Darker",
             "Very Dark",
             "None"});
-            this.cbResetImageOptions.Location = new System.Drawing.Point(183, 377);
+            this.cbResetImageOptions.Location = new System.Drawing.Point(173, 145);
             this.cbResetImageOptions.Name = "cbResetImageOptions";
             this.cbResetImageOptions.Size = new System.Drawing.Size(126, 21);
             this.cbResetImageOptions.TabIndex = 199;
@@ -419,7 +426,7 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(16, 380);
+            this.label32.Location = new System.Drawing.Point(6, 148);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(162, 13);
             this.label32.TabIndex = 198;
@@ -429,7 +436,7 @@
             // 
             this.cbUseSunriseSunset.AutoSize = true;
             this.cbUseSunriseSunset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbUseSunriseSunset.Location = new System.Drawing.Point(16, 233);
+            this.cbUseSunriseSunset.Location = new System.Drawing.Point(6, 137);
             this.cbUseSunriseSunset.Name = "cbUseSunriseSunset";
             this.cbUseSunriseSunset.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cbUseSunriseSunset.Size = new System.Drawing.Size(256, 17);
@@ -442,11 +449,11 @@
             // 
             // btnWeatherReport
             // 
-            this.btnWeatherReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnWeatherReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnWeatherReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWeatherReport.Location = new System.Drawing.Point(369, 295);
+            this.btnWeatherReport.Location = new System.Drawing.Point(276, 134);
             this.btnWeatherReport.Name = "btnWeatherReport";
-            this.btnWeatherReport.Size = new System.Drawing.Size(138, 23);
+            this.btnWeatherReport.Size = new System.Drawing.Size(152, 23);
             this.btnWeatherReport.TabIndex = 203;
             this.btnWeatherReport.Text = "Get Current Weather Report";
             this.btnWeatherReport.UseVisualStyleBackColor = true;
@@ -454,9 +461,8 @@
             // 
             // btnAdvancedSettings
             // 
-            this.btnAdvancedSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAdvancedSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdvancedSettings.Location = new System.Drawing.Point(369, 434);
+            this.btnAdvancedSettings.Location = new System.Drawing.Point(627, 368);
             this.btnAdvancedSettings.Name = "btnAdvancedSettings";
             this.btnAdvancedSettings.Size = new System.Drawing.Size(138, 23);
             this.btnAdvancedSettings.TabIndex = 204;
@@ -473,7 +479,7 @@
             // 
             // txtLongitude
             // 
-            this.txtLongitude.Location = new System.Drawing.Point(212, 176);
+            this.txtLongitude.Location = new System.Drawing.Point(202, 80);
             this.txtLongitude.MaxLength = 100;
             this.txtLongitude.Name = "txtLongitude";
             this.txtLongitude.Size = new System.Drawing.Size(68, 20);
@@ -484,7 +490,7 @@
             // 
             // txtLatitude
             // 
-            this.txtLatitude.Location = new System.Drawing.Point(78, 176);
+            this.txtLatitude.Location = new System.Drawing.Point(68, 80);
             this.txtLatitude.MaxLength = 100;
             this.txtLatitude.Name = "txtLatitude";
             this.txtLatitude.Size = new System.Drawing.Size(68, 20);
@@ -495,24 +501,22 @@
             // 
             // lblSunriseSunset
             // 
-            this.lblSunriseSunset.AutoSize = true;
             this.lblSunriseSunset.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSunriseSunset.Location = new System.Drawing.Point(307, 176);
+            this.lblSunriseSunset.Location = new System.Drawing.Point(276, 80);
             this.lblSunriseSunset.Name = "lblSunriseSunset";
             this.lblSunriseSunset.Padding = new System.Windows.Forms.Padding(5);
-            this.lblSunriseSunset.Size = new System.Drawing.Size(57, 38);
+            this.lblSunriseSunset.Size = new System.Drawing.Size(152, 38);
             this.lblSunriseSunset.TabIndex = 209;
-            this.lblSunriseSunset.Text = "Sunrise:\r\nSunset:";
+            this.lblSunriseSunset.Text = "Sunrise: (not found)\r\nSunset: (not found)";
             this.toolTip1.SetToolTip(this.lblSunriseSunset, "The calculated sunrise and sunset times for your location.  \r\nNOTE: This is not \"" +
         "Daylight Savings Aware\" and times may vary from the true times.");
             // 
             // cbShowSplash
             // 
-            this.cbShowSplash.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbShowSplash.AutoSize = true;
             this.cbShowSplash.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cbShowSplash.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbShowSplash.Location = new System.Drawing.Point(400, 12);
+            this.cbShowSplash.Location = new System.Drawing.Point(424, 19);
             this.cbShowSplash.Name = "cbShowSplash";
             this.cbShowSplash.Size = new System.Drawing.Size(108, 17);
             this.cbShowSplash.TabIndex = 210;
@@ -523,7 +527,7 @@
             // 
             // txtOffsetMins
             // 
-            this.txtOffsetMins.Location = new System.Drawing.Point(79, 203);
+            this.txtOffsetMins.Location = new System.Drawing.Point(69, 107);
             this.txtOffsetMins.MaxLength = 50;
             this.txtOffsetMins.Name = "txtOffsetMins";
             this.txtOffsetMins.Size = new System.Drawing.Size(37, 20);
@@ -534,12 +538,11 @@
             // 
             // lblCityFound
             // 
-            this.lblCityFound.AutoSize = true;
             this.lblCityFound.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblCityFound.Location = new System.Drawing.Point(307, 139);
+            this.lblCityFound.Location = new System.Drawing.Point(297, 43);
             this.lblCityFound.Name = "lblCityFound";
             this.lblCityFound.Padding = new System.Windows.Forms.Padding(5);
-            this.lblCityFound.Size = new System.Drawing.Size(79, 25);
+            this.lblCityFound.Size = new System.Drawing.Size(131, 25);
             this.lblCityFound.TabIndex = 219;
             this.lblCityFound.Text = "Found: none";
             this.toolTip1.SetToolTip(this.lblCityFound, "The name of the city found when you enter a city name, and press Find");
@@ -547,7 +550,7 @@
             // label50
             // 
             this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(16, 125);
+            this.label50.Location = new System.Drawing.Point(6, 29);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(137, 13);
             this.label50.TabIndex = 218;
@@ -560,7 +563,7 @@
             // 
             this.btnSetLocation.Enabled = false;
             this.btnSetLocation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetLocation.Location = new System.Drawing.Point(257, 139);
+            this.btnSetLocation.Location = new System.Drawing.Point(247, 43);
             this.btnSetLocation.Name = "btnSetLocation";
             this.btnSetLocation.Size = new System.Drawing.Size(44, 23);
             this.btnSetLocation.TabIndex = 217;
@@ -574,7 +577,7 @@
             // btnFindLocation
             // 
             this.btnFindLocation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFindLocation.Location = new System.Drawing.Point(176, 139);
+            this.btnFindLocation.Location = new System.Drawing.Point(166, 43);
             this.btnFindLocation.Name = "btnFindLocation";
             this.btnFindLocation.Size = new System.Drawing.Size(75, 23);
             this.btnFindLocation.TabIndex = 216;
@@ -587,9 +590,8 @@
             // 
             // btnViewErrorLog
             // 
-            this.btnViewErrorLog.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnViewErrorLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewErrorLog.Location = new System.Drawing.Point(369, 324);
+            this.btnViewErrorLog.Location = new System.Drawing.Point(12, 368);
             this.btnViewErrorLog.Name = "btnViewErrorLog";
             this.btnViewErrorLog.Size = new System.Drawing.Size(138, 23);
             this.btnViewErrorLog.TabIndex = 220;
@@ -600,9 +602,8 @@
             // 
             // btnOpenWallpaperFolder
             // 
-            this.btnOpenWallpaperFolder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOpenWallpaperFolder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOpenWallpaperFolder.Location = new System.Drawing.Point(369, 353);
+            this.btnOpenWallpaperFolder.Location = new System.Drawing.Point(156, 368);
             this.btnOpenWallpaperFolder.Name = "btnOpenWallpaperFolder";
             this.btnOpenWallpaperFolder.Size = new System.Drawing.Size(138, 23);
             this.btnOpenWallpaperFolder.TabIndex = 221;
@@ -613,9 +614,8 @@
             // 
             // btnOpenSettingsFolder
             // 
-            this.btnOpenSettingsFolder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOpenSettingsFolder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOpenSettingsFolder.Location = new System.Drawing.Point(369, 382);
+            this.btnOpenSettingsFolder.Location = new System.Drawing.Point(300, 368);
             this.btnOpenSettingsFolder.Name = "btnOpenSettingsFolder";
             this.btnOpenSettingsFolder.Size = new System.Drawing.Size(138, 23);
             this.btnOpenSettingsFolder.TabIndex = 222;
@@ -630,7 +630,7 @@
             this.lblWallpaperModesExplained.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblWallpaperModesExplained.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWallpaperModesExplained.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblWallpaperModesExplained.Location = new System.Drawing.Point(429, 40);
+            this.lblWallpaperModesExplained.Location = new System.Drawing.Point(419, 24);
             this.lblWallpaperModesExplained.Name = "lblWallpaperModesExplained";
             this.lblWallpaperModesExplained.Size = new System.Drawing.Size(19, 20);
             this.lblWallpaperModesExplained.TabIndex = 225;
@@ -650,7 +650,7 @@
             "Tile",
             "Span",
             "LAWC"});
-            this.cbWallpaperMode.Location = new System.Drawing.Point(355, 40);
+            this.cbWallpaperMode.Location = new System.Drawing.Point(345, 24);
             this.cbWallpaperMode.Name = "cbWallpaperMode";
             this.cbWallpaperMode.Size = new System.Drawing.Size(68, 21);
             this.cbWallpaperMode.TabIndex = 223;
@@ -661,7 +661,7 @@
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(496, 98);
+            this.label44.Location = new System.Drawing.Point(674, 58);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(15, 13);
             this.label44.TabIndex = 233;
@@ -675,7 +675,7 @@
             0,
             0,
             0});
-            this.numImageSizeScalePercent.Location = new System.Drawing.Point(433, 96);
+            this.numImageSizeScalePercent.Location = new System.Drawing.Point(611, 56);
             this.numImageSizeScalePercent.Maximum = new decimal(new int[] {
             500,
             0,
@@ -700,12 +700,12 @@
             // cbUseHSV
             // 
             this.cbUseHSV.AutoSize = true;
-            this.cbUseHSV.Location = new System.Drawing.Point(216, 97);
+            this.cbUseHSV.Location = new System.Drawing.Point(575, 26);
             this.cbUseHSV.Name = "cbUseHSV";
             this.cbUseHSV.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cbUseHSV.Size = new System.Drawing.Size(120, 17);
+            this.cbUseHSV.Size = new System.Drawing.Size(158, 17);
             this.cbUseHSV.TabIndex = 234;
-            this.cbUseHSV.Text = "Enhance Wallpaper";
+            this.cbUseHSV.Text = "Enhance Wallpaper Colours";
             this.toolTip1.SetToolTip(this.cbUseHSV, resources.GetString("cbUseHSV.ToolTip"));
             this.cbUseHSV.UseVisualStyleBackColor = true;
             this.cbUseHSV.CheckedChanged += new System.EventHandler(this.CbUseHSV_CheckedChanged);
@@ -717,7 +717,7 @@
             this.cbUseDarkLightTimes.Checked = true;
             this.cbUseDarkLightTimes.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbUseDarkLightTimes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbUseDarkLightTimes.Location = new System.Drawing.Point(16, 260);
+            this.cbUseDarkLightTimes.Location = new System.Drawing.Point(6, 28);
             this.cbUseDarkLightTimes.Name = "cbUseDarkLightTimes";
             this.cbUseDarkLightTimes.Size = new System.Drawing.Size(127, 17);
             this.cbUseDarkLightTimes.TabIndex = 235;
@@ -729,7 +729,7 @@
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(152, 179);
+            this.label42.Location = new System.Drawing.Point(142, 83);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(54, 13);
             this.label42.TabIndex = 206;
@@ -738,7 +738,7 @@
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(16, 179);
+            this.label41.Location = new System.Drawing.Point(6, 83);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(45, 13);
             this.label41.TabIndex = 205;
@@ -747,7 +747,7 @@
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(122, 206);
+            this.label47.Location = new System.Drawing.Point(112, 110);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(44, 13);
             this.label47.TabIndex = 213;
@@ -756,7 +756,7 @@
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(16, 206);
+            this.label46.Location = new System.Drawing.Point(6, 110);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(61, 13);
             this.label46.TabIndex = 211;
@@ -767,7 +767,7 @@
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Location = new System.Drawing.Point(-5, 449);
+            this.btnCancel.Location = new System.Drawing.Point(-5, 382);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(105, 23);
             this.btnCancel.TabIndex = 214;
@@ -777,7 +777,7 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(19, 141);
+            this.txtSearch.Location = new System.Drawing.Point(9, 45);
             this.txtSearch.MaxLength = 100;
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(151, 20);
@@ -786,7 +786,7 @@
             // lblImageScaling
             // 
             this.lblImageScaling.AutoSize = true;
-            this.lblImageScaling.Location = new System.Drawing.Point(280, 43);
+            this.lblImageScaling.Location = new System.Drawing.Point(270, 27);
             this.lblImageScaling.Name = "lblImageScaling";
             this.lblImageScaling.Size = new System.Drawing.Size(69, 13);
             this.lblImageScaling.TabIndex = 224;
@@ -799,7 +799,7 @@
             this.cbMultiMonitorMode.Items.AddRange(new object[] {
             "SameOnAll",
             "DifferentOnAll"});
-            this.cbMultiMonitorMode.Location = new System.Drawing.Point(420, 69);
+            this.cbMultiMonitorMode.Location = new System.Drawing.Point(410, 55);
             this.cbMultiMonitorMode.Name = "cbMultiMonitorMode";
             this.cbMultiMonitorMode.Size = new System.Drawing.Size(93, 21);
             this.cbMultiMonitorMode.TabIndex = 227;
@@ -809,7 +809,7 @@
             // lblMultiMonDisplay
             // 
             this.lblMultiMonDisplay.AutoSize = true;
-            this.lblMultiMonDisplay.Location = new System.Drawing.Point(261, 72);
+            this.lblMultiMonDisplay.Location = new System.Drawing.Point(251, 58);
             this.lblMultiMonDisplay.Name = "lblMultiMonDisplay";
             this.lblMultiMonDisplay.Size = new System.Drawing.Size(155, 13);
             this.lblMultiMonDisplay.TabIndex = 226;
@@ -818,82 +818,130 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(349, 98);
+            this.label1.Location = new System.Drawing.Point(527, 58);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 13);
             this.label1.TabIndex = 231;
             this.label1.Text = "Border / Scale";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.cbShowSplash);
+            this.groupBox1.Controls.Add(this.cbCheckForUpdates);
+            this.groupBox1.Controls.Add(this.cbStartMinimized);
+            this.groupBox1.Controls.Add(this.cbAutoStart);
+            this.groupBox1.Controls.Add(this.cbShowToolTips);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(753, 52);
+            this.groupBox1.TabIndex = 236;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "General";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.cbImageOrder);
+            this.groupBox2.Controls.Add(this.cbWallpaperMode);
+            this.groupBox2.Controls.Add(this.cbUseHSV);
+            this.groupBox2.Controls.Add(this.lblImageScaling);
+            this.groupBox2.Controls.Add(this.label44);
+            this.groupBox2.Controls.Add(this.lblWallpaperModesExplained);
+            this.groupBox2.Controls.Add(this.numImageSizeScalePercent);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.cbMultiMonitorMode);
+            this.groupBox2.Controls.Add(this.numWallpaperChangeMins);
+            this.groupBox2.Controls.Add(this.lblMultiMonDisplay);
+            this.groupBox2.Controls.Add(this.lblImageTime);
+            this.groupBox2.Location = new System.Drawing.Point(12, 70);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(753, 108);
+            this.groupBox2.TabIndex = 237;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Wallpaper";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label50);
+            this.groupBox3.Controls.Add(this.cbUseSunriseSunset);
+            this.groupBox3.Controls.Add(this.label41);
+            this.groupBox3.Controls.Add(this.label42);
+            this.groupBox3.Controls.Add(this.txtLatitude);
+            this.groupBox3.Controls.Add(this.txtLongitude);
+            this.groupBox3.Controls.Add(this.lblSunriseSunset);
+            this.groupBox3.Controls.Add(this.lblCityFound);
+            this.groupBox3.Controls.Add(this.label46);
+            this.groupBox3.Controls.Add(this.btnWeatherReport);
+            this.groupBox3.Controls.Add(this.txtOffsetMins);
+            this.groupBox3.Controls.Add(this.btnSetLocation);
+            this.groupBox3.Controls.Add(this.label47);
+            this.groupBox3.Controls.Add(this.btnFindLocation);
+            this.groupBox3.Controls.Add(this.txtSearch);
+            this.groupBox3.Location = new System.Drawing.Point(331, 184);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(434, 178);
+            this.groupBox3.TabIndex = 238;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Location";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.cbUseDarkLightTimes);
+            this.groupBox4.Controls.Add(this.cbLightHour);
+            this.groupBox4.Controls.Add(this.cbLightMin);
+            this.groupBox4.Controls.Add(this.lblEndTime);
+            this.groupBox4.Controls.Add(this.label4);
+            this.groupBox4.Controls.Add(this.pnlBackgroundColourLight);
+            this.groupBox4.Controls.Add(this.cbDarkHour);
+            this.groupBox4.Controls.Add(this.lblStartTime);
+            this.groupBox4.Controls.Add(this.cbDarkMin);
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Controls.Add(this.pnlBackgroundColourDark);
+            this.groupBox4.Controls.Add(this.cbResetImageOptions);
+            this.groupBox4.Controls.Add(this.label32);
+            this.groupBox4.Location = new System.Drawing.Point(12, 184);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(313, 178);
+            this.groupBox4.TabIndex = 239;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Wallpaper Dark and Light Time";
             // 
             // frmSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(525, 469);
-            this.Controls.Add(this.cbUseDarkLightTimes);
-            this.Controls.Add(this.cbUseHSV);
-            this.Controls.Add(this.label44);
-            this.Controls.Add(this.numImageSizeScalePercent);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.cbMultiMonitorMode);
-            this.Controls.Add(this.lblMultiMonDisplay);
-            this.Controls.Add(this.lblWallpaperModesExplained);
-            this.Controls.Add(this.lblImageScaling);
-            this.Controls.Add(this.cbWallpaperMode);
+            this.ClientSize = new System.Drawing.Size(777, 402);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnOpenSettingsFolder);
             this.Controls.Add(this.btnOpenWallpaperFolder);
             this.Controls.Add(this.btnViewErrorLog);
-            this.Controls.Add(this.lblCityFound);
-            this.Controls.Add(this.label50);
-            this.Controls.Add(this.btnSetLocation);
-            this.Controls.Add(this.btnFindLocation);
-            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.label47);
-            this.Controls.Add(this.txtOffsetMins);
-            this.Controls.Add(this.label46);
-            this.Controls.Add(this.cbShowSplash);
-            this.Controls.Add(this.lblSunriseSunset);
-            this.Controls.Add(this.txtLongitude);
-            this.Controls.Add(this.txtLatitude);
-            this.Controls.Add(this.label42);
-            this.Controls.Add(this.label41);
             this.Controls.Add(this.btnAdvancedSettings);
-            this.Controls.Add(this.btnWeatherReport);
-            this.Controls.Add(this.cbUseSunriseSunset);
-            this.Controls.Add(this.cbResetImageOptions);
-            this.Controls.Add(this.label32);
-            this.Controls.Add(this.pnlBackgroundColourDark);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.cbDarkMin);
-            this.Controls.Add(this.lblStartTime);
-            this.Controls.Add(this.cbDarkHour);
-            this.Controls.Add(this.pnlBackgroundColourLight);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.lblEndTime);
-            this.Controls.Add(this.cbLightMin);
-            this.Controls.Add(this.cbLightHour);
-            this.Controls.Add(this.lblImageTime);
-            this.Controls.Add(this.cbCheckForUpdates);
-            this.Controls.Add(this.cbStartMinimized);
-            this.Controls.Add(this.cbShowToolTips);
-            this.Controls.Add(this.cbAutoStart);
-            this.Controls.Add(this.numWallpaperChangeMins);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.cbImageOrder);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmSettings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "LAWC Settings";
             this.Load += new System.EventHandler(this.frmSettings_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numWallpaperChangeMins)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numImageSizeScalePercent)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -953,5 +1001,9 @@
         internal System.Windows.Forms.CheckBox cbUseHSV;
         internal System.Windows.Forms.CheckBox cbStartMinimized;
         internal System.Windows.Forms.CheckBox cbShowSplash;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox4;
     }
 }

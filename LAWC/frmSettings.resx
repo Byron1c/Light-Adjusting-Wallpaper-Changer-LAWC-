@@ -120,6 +120,9 @@
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>25, 5</value>
   </metadata>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>25, 5</value>
+  </metadata>
   <data name="cbUseHSV.ToolTip" xml:space="preserve">
     <value>Adjust the wallpaper image to be a bit brighter, more 
 colourful, and enhance the blue tones during the light time,

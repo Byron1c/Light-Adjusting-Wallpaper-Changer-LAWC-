@@ -152,6 +152,14 @@ of downloadable textures for tiling across your desktop.
 
 History
 =====================================================================
+0.9.9.1  2019-11-24    BETA.
+* Fixed issue with Open Weather not always reading data
+* Added option to use own Open Weather API Key
+* Improved messages when there is a problem with Open Weather
+* Added / fixed compatibility with Win 8.1, 7 
+* Improved basic settings layout for usability
+
+
 0.9.9.0  2019-10-01    BETA.
 * MAJOR FIX: Issue with multiple screens / different DPI settings not displaying correctly is now FIXED!!
 * Improved preset dark settings to not look so terrible

@@ -118,6 +118,8 @@ namespace LAWC.Common
                 {
                     //WriteError("Error 005: BitmapFromFile - file doesnt exist " + filename);
                     ProcessError(null, ErrorMessageType.FileDoesntExist, false, false, string.Format(CultureInfo.InvariantCulture, "{0}", filename), vSettingsFullPath);
+                    //return image not found?
+                    vImageResult = null;
                 }
             }
             catch (FileLoadException ex)
