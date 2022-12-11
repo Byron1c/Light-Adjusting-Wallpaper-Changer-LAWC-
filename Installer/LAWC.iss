@@ -3,7 +3,7 @@
 
 #define MyAppName "Light Adjusting Wallpaper Changer (LAWC)"
 #define MyAppNameSHORT "LAWC"
-#define MyAppVersion "0.9.9.1_BETA"           
+#define MyAppVersion "0.9.9.2_BETA"           
 #define MyAppPublisher "Strangetimez"
 #define MyAppURL "https://www.strangetimez.com/Blog/light-adjusting-wallpaper-changer-application/"
 #define MyAppExeName "LAWC.exe"
@@ -56,28 +56,28 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
          
 
 [Files]
-Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\LAWC\bin\Debug\LAWC.exe"; DestDir: "{app}"; Flags: ignoreversion; Check:IsDotNet461Detected 
-Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\LAWC\bin\Debug\LAWC.exe.config"; DestDir: "{app}"; Flags: ignoreversion; 
+Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\LAWC\bin\Release\LAWC.exe"; DestDir: "{app}"; Flags: ignoreversion; Check:IsDotNet461Detected 
+Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\LAWC\bin\Release\LAWC.exe.config"; DestDir: "{app}"; Flags: ignoreversion; 
 
-Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\LAWC\bin\Debug\MBG.SimpleWizard.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\LAWC\bin\Debug\CustomScrollBar.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\LAWC\bin\Debug\OpenWeatherAPI.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\LAWC\bin\Debug\Newtonsoft.Json.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\LAWC\bin\Debug\OpenHardwareMonitorLib.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\LAWC\bin\Debug\MetadataExtractor.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\LAWC\bin\Debug\ObjectListView.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\LAWC\bin\Debug\XmpCore.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\LAWC\bin\Debug\ImageProcessor.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\LAWC\bin\Debug\JetBrains.Annotations.dll"; DestDir: "{app}"; Flags: ignoreversion
-;Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\ColorMatrix\bin\Debug\ColorMatrixExt.dll"; DestDir: "{app}"; Flags: ignoreversion
-;Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\ColorMatrix\bin\Debug\Matrix.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\LAWC\bin\Release\MBG.SimpleWizard.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\LAWC\bin\Release\CustomScrollBar.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\LAWC\bin\Release\OpenWeatherAPI.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\LAWC\bin\Release\Newtonsoft.Json.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\LAWC\bin\Release\OpenHardwareMonitorLib.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\LAWC\bin\Release\MetadataExtractor.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\LAWC\bin\Release\ObjectListView.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\LAWC\bin\Release\XmpCore.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\LAWC\bin\Release\ImageProcessor.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\LAWC\bin\Release\JetBrains.Annotations.dll"; DestDir: "{app}"; Flags: ignoreversion
+;Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\ColorMatrix\bin\Release\ColorMatrixExt.dll"; DestDir: "{app}"; Flags: ignoreversion
+;Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\ColorMatrix\bin\Release\Matrix.dll"; DestDir: "{app}"; Flags: ignoreversion
 
-Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\LAWC\bin\Debug\Images\Sample4k.jpg"; DestDir: "{app}\Images"; Flags: ignoreversion
-Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\LAWC\bin\Debug\Images\LAWC.ico"; DestDir: "{app}\Images"; Flags: ignoreversion
-Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\LAWC\bin\Debug\Images\LAWCWorking.ico"; DestDir: "{app}\Images"; Flags: ignoreversion
-Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\LAWC\bin\Debug\WallpaperWebsites.xml"; DestDir: "{app}"; Flags: ignoreversion; 
+Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\LAWC\bin\Release\Images\Sample4k.jpg"; DestDir: "{app}\Images"; Flags: ignoreversion
+Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\LAWC\bin\Release\Images\LAWC.ico"; DestDir: "{app}\Images"; Flags: ignoreversion
+Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\LAWC\bin\Release\Images\LAWCWorking.ico"; DestDir: "{app}\Images"; Flags: ignoreversion
+Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\LAWC\bin\Release\WallpaperWebsites.xml"; DestDir: "{app}"; Flags: ignoreversion; 
 Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\Installer\Uninstall.bat"; DestDir: "{app}"; Flags: ignoreversion
-Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\LAWC\bin\Debug\Readme.txt"; DestDir: "{app}"; Flags: isreadme
+Source: "E:\Users\Troy\Dropbox\@Backup\VisualStudio\LAWC\LAWC\bin\Release\Readme.txt"; DestDir: "{app}"; Flags: isreadme
                                               
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 

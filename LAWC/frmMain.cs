@@ -419,6 +419,8 @@ namespace LAWC
         {
             // do this here incase this function is called directly/outside of the startup processes
             applyingSettings = vFirstRun;
+
+            SetIconWorking();
             
             if (debugEnabled) WriteText("DEBUG: LAWC Startup() started", string.Empty); //settings.WriteToLog);
 
@@ -429,7 +431,7 @@ namespace LAWC
 
             if (debugEnabled) WriteText("DEBUG: Starting LoadSettings()", string.Empty);
             refreshSplashScreen("Loading Settings");
-            notifyIcon1.Text = "LAWC - Loading Settings";
+            notifyIcon1.Text = "LAWC - Loading";
             LoadSettings(vSettingsPath);
             if (debugEnabled) WriteText("DEBUG: settings loaded", string.Empty);
             if (splashScreen.cancel == true) Quit(false);
@@ -472,6 +474,8 @@ namespace LAWC
             }
 
             if (debugEnabled) WriteText("DEBUG: startup() finished", string.Empty);
+
+            SetIconReady();
 
             applyingSettings = false;
 
@@ -2348,6 +2352,21 @@ namespace LAWC
             output = output.Replace("<<DateTime>>", DateTime.Now.ToString("yyyy/MM/dd HH:mm", CultureInfo.InvariantCulture));
             if (vIndexWallpaper >= 0 && vIndexWallpaper < settings.Images.Count) 
                 output = output.Replace("<<Filename>>", settings.Images[vIndexWallpaper].Filename);
+
+            if (vIndexWallpaper >= 0 && vIndexWallpaper < settings.Images.Count)
+                output = output.Replace("<<Category>>", settings.Images[vIndexWallpaper].FullPath);
+
+            if (vIndexWallpaper >= 0 && vIndexWallpaper < settings.Images.Count)
+            {
+                String[] path = settings.Images[vIndexWallpaper].FullPath.ToString().Split('\\');
+                String pathDisplay = settings.Images[vIndexWallpaper].FullPath.ToString();
+                if (path.Length >= 2)
+                {
+                    pathDisplay = path[path.Length - 3] + "\\" + path[path.Length - 2];
+                }
+
+                output = output.Replace("<<Category2>>", pathDisplay);
+            }
 
             if (output.ToUpperInvariant().Contains("<<META_"))
             {
@@ -4863,6 +4882,8 @@ namespace LAWC
 
         private void AutoBackup()
         {
+            if (!settings.AutoBackup) return;
+
             string LatestBackup = getLastBackupFilename();
             long secondsOld = 0; // how long since the last backup
 
@@ -4873,7 +4894,7 @@ namespace LAWC
                     System.IO.FileInfo fileInfo = new System.IO.FileInfo(LatestBackup);
                     secondsOld = (long)DateTime.Now.Subtract(fileInfo.CreationTime).TotalSeconds;
                     int days = (int)(secondsOld / 60 / 60 / 24);
-                    if (days > FrmMain.AutobackupDays)
+                    if (days >= settings.AutoBackupDays) //FrmMain.AutobackupDays)
                     {
                         BackupSettings(false);
                     }
@@ -5382,6 +5403,26 @@ namespace LAWC
             }
 
 
+            SetIconWorking();
+            //try
+            //{
+            //    this.Invoke((Action)delegate
+            //    {
+            //        notifyIcon1.Icon = new System.Drawing.Icon(Application.StartupPath + @"\Images\LAWCWorking.ico");
+            //    });
+            //}
+            //catch (Exception)
+            //{
+            //    //Do Nothing
+            //}
+
+            Application.DoEvents();
+
+        }
+
+
+        internal void SetIconWorking()
+        {
             try
             {
                 this.Invoke((Action)delegate
@@ -5393,18 +5434,32 @@ namespace LAWC
             {
                 //Do Nothing
             }
-
-            Application.DoEvents();
-
         }
 
-        internal void HideChangeWallpaperWorking()
+        internal void SetIconReady()
+        {
+            try
+            {
+                this.Invoke((Action)delegate
+                {
+                    notifyIcon1.Icon = new System.Drawing.Icon(Application.StartupPath + @"\Images\LAWC.ico");
+                });
+            }
+            catch (Exception)
+            {
+                //Do Nothing
+            }
+        }
+
+
+            internal void HideChangeWallpaperWorking()
         {
             // if we arent quitting the app 
-            if (btnWallpaperChange.IsDisposed == false)
+            //if (btnWallpaperChange.IsDisposed == false)
+            if (formClosing == false)
             {
                 HideWorkingMessage();
-
+                
                 btnWallpaperChange.Invoke((Action)delegate
                 {
                     btnWallpaperChange.Enabled = true;
@@ -5416,8 +5471,11 @@ namespace LAWC
                     changeWallpaperNowToolStripMenuItem.Enabled = true;
                 });
 
-                notifyIcon1.Icon = new System.Drawing.Icon(Application.StartupPath + @"\Images\LAWC.ico");
+                //notifyIcon1.Icon = new System.Drawing.Icon(Application.StartupPath + @"\Images\LAWC.ico");
+                //SetIconReady();
             }
+
+            SetIconReady();
 
         }
 
@@ -8894,6 +8952,8 @@ namespace LAWC
         {
             if (string.IsNullOrEmpty(vPath)) return;
 
+            int pos = 0;
+
             string currentItemName;// = string.Empty;
 
             System.IO.DirectoryInfo dirInfo = new System.IO.DirectoryInfo(vPath);
@@ -8915,6 +8975,8 @@ namespace LAWC
                 }
                 else
                 {
+                    pos++;
+                                        
                     currentItemName = fileObject.Name;
 
                     // are file types okay / appropriate

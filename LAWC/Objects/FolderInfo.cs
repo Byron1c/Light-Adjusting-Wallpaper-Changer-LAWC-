@@ -13,6 +13,13 @@ namespace LAWC.Objects
             set { path = value; }
         }
 
+        private String pathDisplay;
+        public string PathDisplay
+        {
+            get { return pathDisplay; }
+            set { pathDisplay = value; }
+        }
+
         private int iD;
         public int ID
         {
@@ -37,9 +44,11 @@ namespace LAWC.Objects
         public FolderInfo()
         {
             Path = "";
+            PathDisplay = "";
             iD = -1;
             enabled = true;
             imageCount = 0;
+
         }
 
         public void setImageCount(Setting vSettings)

@@ -218,6 +218,17 @@ namespace LAWC.Common
             set { autoBackup = value; }
         }
 
+        
+        /// <summary>
+        /// Does the user want an Auto backup done periodically, how often
+        /// </summary>
+        private int autoBackupDays;
+        public int AutoBackupDays
+        {
+            get { return autoBackupDays; }
+            set { autoBackupDays = value; }
+        }
+
         /// <summary>
         /// Filter for smallest file size allowed for wallpapers
         /// </summary>
@@ -960,6 +971,7 @@ namespace LAWC.Common
             UseSunriseSunset = false;
             UseFilters = true;
             AutoBackup = true;
+            AutoBackupDays = 5;
             LocationPreset = "[NONE]";
             ImageAdjustmentName = "Darker";
             SizeKBytesMin = 30;
@@ -1941,6 +1953,11 @@ namespace LAWC.Common
                             vSetting.AutoBackup = Boolean.Parse(dr["Value"].ToString());
                         }
 
+                        if (dr["Setting"].ToString() == "AutoBackupDays")
+                        {
+                            vSetting.AutoBackupDays = int.Parse(dr["Value"].ToString());
+                        }
+
                         if (dr["Setting"].ToString() == "LocationPreset")
                         {
                             vSetting.LocationPreset = dr["Value"].ToString();
@@ -2309,6 +2326,7 @@ namespace LAWC.Common
 
             dtConfig.Rows.Add("UseFilters", vSetting.UseFilters.ToString(CultureInfo.InvariantCulture));
             dtConfig.Rows.Add("AutoBackup", vSetting.AutoBackup.ToString(CultureInfo.InvariantCulture));
+            dtConfig.Rows.Add("AutoBackupDays", vSetting.AutoBackupDays.ToString(CultureInfo.InvariantCulture));
             dtConfig.Rows.Add("MultiMonitorMode", vSetting.MultiMonitorMode.ToString());
             dtConfig.Rows.Add("AspectThresholdWide", vSetting.AspectThresholdWide.ToString(CultureInfo.InvariantCulture));
             dtConfig.Rows.Add("AspectThresholdNarrow", vSetting.AspectThresholdNarrow.ToString(CultureInfo.InvariantCulture));
@@ -2650,10 +2668,18 @@ namespace LAWC.Common
                     {
                         dr = vDSMain.Tables["Folders"].Rows[i];
 
+                        String[] path = dr["Path"].ToString().Split('\\');
+                        String pathDisplay = dr["Path"].ToString();
+                        if (path.Length >= 2) 
+                        {
+                            pathDisplay = path[path.Length - 2] + "\\" + path[path.Length - 1];
+                        }
+
                         FolderInfo item = new FolderInfo
                         {
                             ID = int.Parse(dr["ID"].ToString(), CultureInfo.InvariantCulture),
                             Path = dr["Path"].ToString(),
+                            PathDisplay = pathDisplay,
                             Enabled = Boolean.Parse(dr["Enabled"].ToString())
                         };
 

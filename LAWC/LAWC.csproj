@@ -59,12 +59,15 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>LAWC.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="CustomScrollBar">
       <HintPath>DLLs\CustomScrollBar.dll</HintPath>
     </Reference>
-    <Reference Include="ImageProcessor, Version=2.7.0.100, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ImageProcessor.2.7.0.100\lib\net452\ImageProcessor.dll</HintPath>
+    <Reference Include="ImageProcessor, Version=2.9.1.225, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ImageProcessor.2.9.1\lib\net452\ImageProcessor.dll</HintPath>
     </Reference>
     <Reference Include="JetBrains.Annotations">
       <HintPath>DLLs\JetBrains.Annotations.dll</HintPath>
@@ -76,8 +79,8 @@
       <HintPath>DLLs\MetadataExtractor.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.12.0.3-beta1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="ObjectListView">
       <HintPath>DLLs\ObjectListView.dll</HintPath>
@@ -88,6 +91,9 @@
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -131,9 +137,16 @@
     <Compile Include="Common\SingleInstanceWinApi.cs" />
     <Compile Include="Common\StringIDs.cs" />
     <Compile Include="Common\ThreadingExt.cs" />
+    <Compile Include="Common\TipControlPointer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\TipControlPointer.Designer.cs">
+      <DependentUpon>TipControlPointer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Common\WinApi.cs" />
     <Compile Include="Common\WindowsMultiDisplayTools.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="Objects\RoundedRectangle.cs" />
     <Compile Include="testForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -266,6 +279,9 @@
     <Compile Include="Wizard\Page4.Designer.cs">
       <DependentUpon>Page4.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Common\TipControlPointer.resx">
+      <DependentUpon>TipControlPointer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="testForm.resx">
       <DependentUpon>testForm.cs</DependentUpon>
     </EmbeddedResource>

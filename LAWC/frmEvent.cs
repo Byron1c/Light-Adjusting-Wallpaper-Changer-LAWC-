@@ -967,7 +967,7 @@ namespace LAWC
 
             numValue.Minimum = -1000000;
             numValue.Maximum = 1000000;
-            numValue.Location = new System.Drawing.Point(85, 171);
+            numValue.Location = new System.Drawing.Point(117, 208);
             numValue.DecimalPlaces = 2;
 
             if ((SensorType)selectedItem.Value == SensorType.SmallData
@@ -1429,6 +1429,16 @@ namespace LAWC
             Random rnd = new Random();
             Color randomColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
             pnlFontColour.BackColor = randomColor;
+        }
+
+        private void wallpaperCategoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            insertText("<<Category>>");
+        }
+
+        private void category2LevelsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            insertText("<<Category2>>");
         }
     }
 }

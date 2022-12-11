@@ -24,7 +24,7 @@ namespace LAWC.Common
         internal static int min(int a, int b) { return Math.Min(a, b); }
         internal static int max(int a, int b) { return Math.Max(a, b); }
 
-        internal static ThreadPriority threadPriority = ThreadPriority.AboveNormal; //ThreadPriority.Normal;
+        internal static ThreadPriority threadPriority = ThreadPriority.Normal; //ThreadPriority.AboveNormal  Normal;
 
         internal static IList<T> Clone<T>(this IList<T> listToClone) where T : ICloneable
         {

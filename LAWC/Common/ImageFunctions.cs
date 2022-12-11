@@ -130,27 +130,73 @@ namespace LAWC.Common
 
         }
 
-        /// <summary>
-        /// load and return an image
-        /// </summary>
-        /// <param name="vImagePath"></param>
-        /// <returns></returns>
+
+        public static Image byteArrayToImage(byte[] byteArrayIn)
+        {
+            System.Drawing.ImageConverter converter = new System.Drawing.ImageConverter();
+            Image img = (Image)converter.ConvertFrom(byteArrayIn);
+
+            return img;
+        }
+
+        //https://stackoverflow.com/questions/8846654/read-image-and-determine-if-its-corrupt-c-sharp
+        public static bool IsValidGDIPlusImage(string filename)
+        {
+            try
+            {
+                using (var bmp = new Bitmap(filename))
+                {
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+        public static bool IsValidGDIPlusImage(byte[] imageData)
+        {
+            try
+            {
+                using (var ms = new MemoryStream(imageData))
+                {
+                    using (var bmp = new Bitmap(ms))
+                    {
+                    }
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+            /// <summary>
+            /// load and return an image
+            /// </summary>
+            /// <param name="vImagePath"></param>
+            /// <returns></returns>
         internal static Image LoadImage(String vImagePath, String vSettingsFullPath)
         {
-            if (System.IO.File.Exists(vImagePath))
+
+            if (IsValidGDIPlusImage(vImagePath) && System.IO.File.Exists(vImagePath))
             {
 
-                using (FileStream fileStream = new FileStream(vImagePath, FileMode.Open, FileAccess.Read))
+                //using (FileStream fileStream = new FileStream(vImagePath, FileMode.Open, FileAccess.Read))
+                using (FileStream fileStream = new FileStream(vImagePath, FileMode.Open, FileAccess.Read, FileShare.Read))
                 {
 
                     try
                     {
-                        return Image.FromStream(fileStream);
+                        return System.Drawing.Bitmap.FromStream(fileStream);
+                        //return Image.FromStream(fileStream);
                     }
                     catch (FileLoadException ex)
                     {
                         //WriteError("Error 008: Unable to load image (" + vImagePath + "): " + ex.Message);
-                        ProcessError(ex, ErrorMessageType.FileProblem, true, false, string.Format(CultureInfo.InvariantCulture, "{0}", vImagePath), vSettingsFullPath);
+                        //ProcessError(ex, ErrorMessageType.FileProblem, true, false, string.Format(CultureInfo.InvariantCulture, "{0}", vImagePath), vSettingsFullPath);
                         return null;
                     }
                 }

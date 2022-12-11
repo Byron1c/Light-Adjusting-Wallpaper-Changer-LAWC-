@@ -624,6 +624,7 @@ namespace LAWC
             this.txtLatitude.Text = parentForm.settings.Latitude.ToString(CultureInfo.InvariantCulture);
             this.txtLongitude.Text = parentForm.settings.Longitude.ToString(CultureInfo.InvariantCulture);
             this.cbAutoBackup.Checked = parentForm.settings.AutoBackup;
+            this.numAutoBackupDays.Value = parentForm.settings.AutoBackupDays;
             this.txtOffsetMins.Text = parentForm.settings.TimeOffsetMins.ToString(CultureInfo.InvariantCulture);
             this.txtSearch.Text = parentForm.settings.LocationPreset.ToString(CultureInfo.InvariantCulture);
             this.lblCityFound.Text = "Found: " + parentForm.settings.LocationPreset.ToString(CultureInfo.InvariantCulture);
@@ -684,6 +685,7 @@ namespace LAWC
 
             SetFiltersState();
             SetUseFilters();
+            setAutoBackup();
 
             //hide/show the cb for quality when JPG selected
             setModeSelection(); // set the visibility of extra settings
@@ -2363,7 +2365,16 @@ namespace LAWC
             if (this.parentForm.applyingSettings == false)
             {
                 parentForm.settings.AutoBackup = cbAutoBackup.Checked;
+                setAutoBackup();
+            }
+        }
 
+        private void setAutoBackup()
+        {
+            if (this.parentForm.applyingSettings == false)
+            {
+                numAutoBackupDays.Enabled = parentForm.settings.AutoBackup;
+                lblAutoBackupDays.Enabled = parentForm.settings.AutoBackup;
             }
         }
 
@@ -3192,6 +3203,14 @@ namespace LAWC
             parentForm.AdjustDesktopImages();
 
             parentForm.HideWorkingMessage();
+        }
+
+        private void numAutoBackupDays_ValueChanged(object sender, EventArgs e)
+        {
+            if (this.parentForm.applyingSettings == false)
+            {
+                parentForm.settings.AutoBackupDays = (int)numAutoBackupDays.Value;
+            }
         }
     }
 }

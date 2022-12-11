@@ -63,7 +63,7 @@ namespace LAWC
                 throw;
 
 
-            }            
+            }
         }
 
     }

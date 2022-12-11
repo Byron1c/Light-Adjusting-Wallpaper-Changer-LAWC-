@@ -1,5 +1,5 @@
 ﻿
-LAWC 0.9.9.1 BETA
+LAWC 0.9.9.2 BETA
 =====================================================================
 Light Adjusting Wallpaper Changer
 https://www.strangetimez.com/Blog/light-adjusting-wallpaper-changer-application/
@@ -152,6 +152,13 @@ of downloadable textures for tiling across your desktop.
 
 History
 =====================================================================
+0.9.9.2  2019-11-24    BETA.
+* Tested and fixed compatibility with Win 8.1, 7 
+* Improved basic settings layout for usability
+* Minor bug fixes
+* JSON Version update
+
+
 0.9.9.1  2019-11-24    BETA.
 * Fixed issue with Open Weather not always reading data
 * Added option to use own Open Weather API Key

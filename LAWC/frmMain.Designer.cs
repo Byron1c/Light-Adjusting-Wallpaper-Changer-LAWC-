@@ -161,7 +161,7 @@ namespace LAWC
             // removeToolStripMenuItem
             // 
             this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
-            this.removeToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.removeToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
             this.removeToolStripMenuItem.Text = "Remove from List";
             this.removeToolStripMenuItem.Click += new System.EventHandler(this.RemoveToolStripMenuItem_Click);
             // 
@@ -172,11 +172,11 @@ namespace LAWC
             this.lblNoEntriesFolders.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblNoEntriesFolders.ContextMenuStrip = this.cmFolders;
             this.lblNoEntriesFolders.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNoEntriesFolders.Location = new System.Drawing.Point(375, 105);
+            this.lblNoEntriesFolders.Location = new System.Drawing.Point(469, 131);
             this.lblNoEntriesFolders.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNoEntriesFolders.Name = "lblNoEntriesFolders";
-            this.lblNoEntriesFolders.Padding = new System.Windows.Forms.Padding(4, 4, 4, 6);
-            this.lblNoEntriesFolders.Size = new System.Drawing.Size(357, 29);
+            this.lblNoEntriesFolders.Padding = new System.Windows.Forms.Padding(5, 5, 5, 8);
+            this.lblNoEntriesFolders.Size = new System.Drawing.Size(418, 35);
             this.lblNoEntriesFolders.TabIndex = 5;
             this.lblNoEntriesFolders.Text = "There are no folders.  Right click here to add a folder.";
             this.lblNoEntriesFolders.Visible = false;
@@ -197,79 +197,79 @@ namespace LAWC
             this.rescanFolderToolStripMenuItem,
             this.rescanAllFoldersToolStripMenuItem1});
             this.cmFolders.Name = "cmFolders";
-            this.cmFolders.Size = new System.Drawing.Size(216, 214);
+            this.cmFolders.Size = new System.Drawing.Size(255, 232);
             // 
             // openFolderToolStripMenuItem
             // 
             this.openFolderToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.openFolderToolStripMenuItem.Name = "openFolderToolStripMenuItem";
-            this.openFolderToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.openFolderToolStripMenuItem.Size = new System.Drawing.Size(254, 24);
             this.openFolderToolStripMenuItem.Text = "Open Folder";
             this.openFolderToolStripMenuItem.Click += new System.EventHandler(this.OpenFolderToolStripMenuItem_Click);
             // 
             // addFolderToolStripMenuItem
             // 
             this.addFolderToolStripMenuItem.Name = "addFolderToolStripMenuItem";
-            this.addFolderToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.addFolderToolStripMenuItem.Size = new System.Drawing.Size(254, 24);
             this.addFolderToolStripMenuItem.Text = "&Add New Folder";
             this.addFolderToolStripMenuItem.Click += new System.EventHandler(this.AddFolderToolStripMenuItem_Click);
             // 
             // removeFolderToolStripMenuItem
             // 
             this.removeFolderToolStripMenuItem.Name = "removeFolderToolStripMenuItem";
-            this.removeFolderToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.removeFolderToolStripMenuItem.Size = new System.Drawing.Size(254, 24);
             this.removeFolderToolStripMenuItem.Text = "&Remove Folder";
             this.removeFolderToolStripMenuItem.Click += new System.EventHandler(this.RemoveFolderToolStripMenuItem_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(212, 6);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(251, 6);
             // 
             // enableToolStripMenuItem
             // 
             this.enableToolStripMenuItem.Name = "enableToolStripMenuItem";
-            this.enableToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.enableToolStripMenuItem.Size = new System.Drawing.Size(254, 24);
             this.enableToolStripMenuItem.Text = "&Enable";
             this.enableToolStripMenuItem.Click += new System.EventHandler(this.EnableToolStripMenuItem_Click);
             // 
             // disableToolStripMenuItem
             // 
             this.disableToolStripMenuItem.Name = "disableToolStripMenuItem";
-            this.disableToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.disableToolStripMenuItem.Size = new System.Drawing.Size(254, 24);
             this.disableToolStripMenuItem.Text = "&Disable";
             this.disableToolStripMenuItem.Click += new System.EventHandler(this.DisableToolStripMenuItem_Click);
             // 
             // toolStripMenuItem8
             // 
             this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(212, 6);
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(251, 6);
             // 
             // checkFoldersToolStripMenuItem
             // 
             this.checkFoldersToolStripMenuItem.Name = "checkFoldersToolStripMenuItem";
-            this.checkFoldersToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.checkFoldersToolStripMenuItem.Size = new System.Drawing.Size(254, 24);
             this.checkFoldersToolStripMenuItem.Text = "&Check Folder Paths";
             this.checkFoldersToolStripMenuItem.Click += new System.EventHandler(this.CheckFoldersToolStripMenuItem_Click);
             // 
             // resetViewCountToolStripMenuItem1
             // 
             this.resetViewCountToolStripMenuItem1.Name = "resetViewCountToolStripMenuItem1";
-            this.resetViewCountToolStripMenuItem1.Size = new System.Drawing.Size(215, 22);
+            this.resetViewCountToolStripMenuItem1.Size = new System.Drawing.Size(254, 24);
             this.resetViewCountToolStripMenuItem1.Text = "Reset &View Count";
             this.resetViewCountToolStripMenuItem1.Click += new System.EventHandler(this.ResetViewCountToolStripMenuItem1_Click);
             // 
             // rescanFolderToolStripMenuItem
             // 
             this.rescanFolderToolStripMenuItem.Name = "rescanFolderToolStripMenuItem";
-            this.rescanFolderToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.rescanFolderToolStripMenuItem.Size = new System.Drawing.Size(254, 24);
             this.rescanFolderToolStripMenuItem.Text = "Rescan &Folder Contents";
             this.rescanFolderToolStripMenuItem.Click += new System.EventHandler(this.RescanFolderToolStripMenuItem_Click);
             // 
             // rescanAllFoldersToolStripMenuItem1
             // 
             this.rescanAllFoldersToolStripMenuItem1.Name = "rescanAllFoldersToolStripMenuItem1";
-            this.rescanAllFoldersToolStripMenuItem1.Size = new System.Drawing.Size(215, 22);
+            this.rescanAllFoldersToolStripMenuItem1.Size = new System.Drawing.Size(254, 24);
             this.rescanAllFoldersToolStripMenuItem1.Text = "Rescan All Folder &Contents";
             this.rescanAllFoldersToolStripMenuItem1.Click += new System.EventHandler(this.RescanAllFoldersToolStripMenuItem1_Click);
             // 
@@ -281,11 +281,11 @@ namespace LAWC
             this.pbPreviewImage.ContextMenuStrip = this.cmPreviewImage;
             this.pbPreviewImage.Image = ((System.Drawing.Image)(resources.GetObject("pbPreviewImage.Image")));
             this.pbPreviewImage.InitialImage = null;
-            this.pbPreviewImage.Location = new System.Drawing.Point(346, 261);
+            this.pbPreviewImage.Location = new System.Drawing.Point(432, 326);
             this.pbPreviewImage.Margin = new System.Windows.Forms.Padding(2);
             this.pbPreviewImage.Name = "pbPreviewImage";
             this.pbPreviewImage.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
-            this.pbPreviewImage.Size = new System.Drawing.Size(395, 223);
+            this.pbPreviewImage.Size = new System.Drawing.Size(493, 278);
             this.pbPreviewImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbPreviewImage.TabIndex = 12;
             this.pbPreviewImage.TabStop = false;
@@ -298,19 +298,19 @@ namespace LAWC
             this.openWallpaperToolStripMenuItem,
             this.toolStripMenuItem5});
             this.cmPreviewImage.Name = "cmPreviewImage";
-            this.cmPreviewImage.Size = new System.Drawing.Size(162, 32);
+            this.cmPreviewImage.Size = new System.Drawing.Size(188, 34);
             // 
             // openWallpaperToolStripMenuItem
             // 
             this.openWallpaperToolStripMenuItem.Name = "openWallpaperToolStripMenuItem";
-            this.openWallpaperToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.openWallpaperToolStripMenuItem.Size = new System.Drawing.Size(187, 24);
             this.openWallpaperToolStripMenuItem.Text = "Open this Image";
             this.openWallpaperToolStripMenuItem.Click += new System.EventHandler(this.OpenWallpaperToolStripMenuItem_Click);
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(158, 6);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(184, 6);
             // 
             // lblNoEntriesImages
             // 
@@ -318,11 +318,11 @@ namespace LAWC
             this.lblNoEntriesImages.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblNoEntriesImages.ContextMenuStrip = this.cmImages;
             this.lblNoEntriesImages.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNoEntriesImages.Location = new System.Drawing.Point(10, 105);
+            this.lblNoEntriesImages.Location = new System.Drawing.Point(12, 131);
             this.lblNoEntriesImages.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNoEntriesImages.Name = "lblNoEntriesImages";
-            this.lblNoEntriesImages.Padding = new System.Windows.Forms.Padding(4, 4, 4, 6);
-            this.lblNoEntriesImages.Size = new System.Drawing.Size(305, 114);
+            this.lblNoEntriesImages.Padding = new System.Windows.Forms.Padding(5, 5, 5, 8);
+            this.lblNoEntriesImages.Size = new System.Drawing.Size(359, 135);
             this.lblNoEntriesImages.TabIndex = 4;
             this.lblNoEntriesImages.Text = "There are no images.  \r\n\r\nRight Click on the Folder area, to add a folder\r\n\r\nOR, " +
     "check your Filter settings by \r\ngoing to Advanced Settings - Filter List";
@@ -349,26 +349,26 @@ namespace LAWC
             this.toolStripMenuItem14,
             this.refreshToolStripMenuItem});
             this.cmImages.Name = "cmImages";
-            this.cmImages.Size = new System.Drawing.Size(205, 264);
+            this.cmImages.Size = new System.Drawing.Size(243, 286);
             // 
             // openFileLocationToolStripMenuItem
             // 
             this.openFileLocationToolStripMenuItem.Name = "openFileLocationToolStripMenuItem";
-            this.openFileLocationToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.openFileLocationToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
             this.openFileLocationToolStripMenuItem.Text = "&Open Image Location";
             this.openFileLocationToolStripMenuItem.Click += new System.EventHandler(this.OpenFileLocationToolStripMenuItem_Click);
             // 
             // renameToolStripMenuItem
             // 
             this.renameToolStripMenuItem.Name = "renameToolStripMenuItem";
-            this.renameToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.renameToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
             this.renameToolStripMenuItem.Text = "&Rename";
             this.renameToolStripMenuItem.Click += new System.EventHandler(this.RenameToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
             this.deleteToolStripMenuItem.Text = "Delete Image";
             this.deleteToolStripMenuItem.Visible = false;
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.DeleteToolStripMenuItem_Click);
@@ -376,64 +376,64 @@ namespace LAWC
             // resetViewCountToolStripMenuItem
             // 
             this.resetViewCountToolStripMenuItem.Name = "resetViewCountToolStripMenuItem";
-            this.resetViewCountToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.resetViewCountToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
             this.resetViewCountToolStripMenuItem.Text = "Reset View Count";
             this.resetViewCountToolStripMenuItem.Click += new System.EventHandler(this.ResetViewCountToolStripMenuItem_Click);
             // 
             // viewMetadataToolStripMenuItem
             // 
             this.viewMetadataToolStripMenuItem.Name = "viewMetadataToolStripMenuItem";
-            this.viewMetadataToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.viewMetadataToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
             this.viewMetadataToolStripMenuItem.Text = "View Metadata";
             this.viewMetadataToolStripMenuItem.Click += new System.EventHandler(this.viewMetadataToolStripMenuItem_Click);
             // 
             // rescanFolderContentsToolStripMenuItem
             // 
             this.rescanFolderContentsToolStripMenuItem.Name = "rescanFolderContentsToolStripMenuItem";
-            this.rescanFolderContentsToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.rescanFolderContentsToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
             this.rescanFolderContentsToolStripMenuItem.Text = "Rescan Folder Contents";
             this.rescanFolderContentsToolStripMenuItem.Click += new System.EventHandler(this.rescanFolderContentsToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(201, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(239, 6);
             // 
             // addImageFolderToolStripMenuItem
             // 
             this.addImageFolderToolStripMenuItem.Name = "addImageFolderToolStripMenuItem";
-            this.addImageFolderToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.addImageFolderToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
             this.addImageFolderToolStripMenuItem.Text = "Add New Folder";
             this.addImageFolderToolStripMenuItem.Click += new System.EventHandler(this.AddImageFolderToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(201, 6);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(239, 6);
             // 
             // selectCurrentWallpaperToolStripMenuItem
             // 
             this.selectCurrentWallpaperToolStripMenuItem.Name = "selectCurrentWallpaperToolStripMenuItem";
-            this.selectCurrentWallpaperToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.selectCurrentWallpaperToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
             this.selectCurrentWallpaperToolStripMenuItem.Text = "Select Current Wallpaper";
             this.selectCurrentWallpaperToolStripMenuItem.Click += new System.EventHandler(this.SelectCurrentWallpaperToolStripMenuItem_Click);
             // 
             // setAsWallpaperToolStripMenuItem
             // 
             this.setAsWallpaperToolStripMenuItem.Name = "setAsWallpaperToolStripMenuItem";
-            this.setAsWallpaperToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.setAsWallpaperToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
             this.setAsWallpaperToolStripMenuItem.Text = "Set as Wallpaper";
             this.setAsWallpaperToolStripMenuItem.Click += new System.EventHandler(this.SetAsWallpaperToolStripMenuItem_Click);
             // 
             // toolStripMenuItem14
             // 
             this.toolStripMenuItem14.Name = "toolStripMenuItem14";
-            this.toolStripMenuItem14.Size = new System.Drawing.Size(201, 6);
+            this.toolStripMenuItem14.Size = new System.Drawing.Size(239, 6);
             // 
             // refreshToolStripMenuItem
             // 
             this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
             this.refreshToolStripMenuItem.Text = "Refresh";
             this.refreshToolStripMenuItem.Click += new System.EventHandler(this.RefreshToolStripMenuItem_Click);
             // 
@@ -447,10 +447,10 @@ namespace LAWC
             // 
             this.btnWallpaperChange.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnWallpaperChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWallpaperChange.Location = new System.Drawing.Point(652, 6);
+            this.btnWallpaperChange.Location = new System.Drawing.Point(815, 8);
             this.btnWallpaperChange.Margin = new System.Windows.Forms.Padding(2);
             this.btnWallpaperChange.Name = "btnWallpaperChange";
-            this.btnWallpaperChange.Size = new System.Drawing.Size(89, 30);
+            this.btnWallpaperChange.Size = new System.Drawing.Size(111, 38);
             this.btnWallpaperChange.TabIndex = 16;
             this.btnWallpaperChange.Text = "Change Now";
             this.toolTip1.SetToolTip(this.btnWallpaperChange, "Change the wallpaper now");
@@ -461,11 +461,11 @@ namespace LAWC
             // 
             this.btnSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSettings.Location = new System.Drawing.Point(451, 6);
+            this.btnSettings.Location = new System.Drawing.Point(564, 8);
             this.btnSettings.Margin = new System.Windows.Forms.Padding(2);
             this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Padding = new System.Windows.Forms.Padding(23, 0, 0, 0);
-            this.btnSettings.Size = new System.Drawing.Size(102, 30);
+            this.btnSettings.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
+            this.btnSettings.Size = new System.Drawing.Size(128, 38);
             this.btnSettings.TabIndex = 15;
             this.btnSettings.Text = "Settings";
             this.toolTip1.SetToolTip(this.btnSettings, "Open the Settings window");
@@ -500,37 +500,37 @@ namespace LAWC
             this.extendedToolStripSeparator2,
             this.exitToolStripMenuItem1});
             this.cmNotifyIcon.Name = "cmNotifyIcon";
-            this.cmNotifyIcon.Size = new System.Drawing.Size(200, 248);
+            this.cmNotifyIcon.Size = new System.Drawing.Size(236, 268);
             // 
             // showWallpaperToolStripMenuItem
             // 
             this.showWallpaperToolStripMenuItem.Name = "showWallpaperToolStripMenuItem";
-            this.showWallpaperToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.showWallpaperToolStripMenuItem.Size = new System.Drawing.Size(235, 24);
             this.showWallpaperToolStripMenuItem.Text = "Show in Explorer";
             this.showWallpaperToolStripMenuItem.Click += new System.EventHandler(this.ShowWallpaperToolStripMenuItem_Click);
             // 
             // openImageToolStripMenuItem
             // 
             this.openImageToolStripMenuItem.Name = "openImageToolStripMenuItem";
-            this.openImageToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.openImageToolStripMenuItem.Size = new System.Drawing.Size(235, 24);
             this.openImageToolStripMenuItem.Text = "Open Image";
             // 
             // deleteImageToolStripMenuItem
             // 
             this.deleteImageToolStripMenuItem.Name = "deleteImageToolStripMenuItem";
-            this.deleteImageToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.deleteImageToolStripMenuItem.Size = new System.Drawing.Size(235, 24);
             this.deleteImageToolStripMenuItem.Text = "Delete Image";
             this.deleteImageToolStripMenuItem.Click += new System.EventHandler(this.deleteImageToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(196, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(232, 6);
             // 
             // darkModeDisabledToolStripMenuItem
             // 
             this.darkModeDisabledToolStripMenuItem.Name = "darkModeDisabledToolStripMenuItem";
-            this.darkModeDisabledToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.darkModeDisabledToolStripMenuItem.Size = new System.Drawing.Size(235, 24);
             this.darkModeDisabledToolStripMenuItem.Text = "Disable Dark";
             this.darkModeDisabledToolStripMenuItem.ToolTipText = "Return LAWC to normal operation and use the times for dark and light (if set)";
             this.darkModeDisabledToolStripMenuItem.Click += new System.EventHandler(this.DarkModeDisabledToolStripMenuItem_Click);
@@ -538,7 +538,7 @@ namespace LAWC
             // darkModeEnableToolStripMenuItem
             // 
             this.darkModeEnableToolStripMenuItem.Name = "darkModeEnableToolStripMenuItem";
-            this.darkModeEnableToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.darkModeEnableToolStripMenuItem.Size = new System.Drawing.Size(235, 24);
             this.darkModeEnableToolStripMenuItem.Text = "Enable Dark";
             this.darkModeEnableToolStripMenuItem.ToolTipText = "Set LAWC to the darkest settings, instead of the set dark and light times";
             this.darkModeEnableToolStripMenuItem.Click += new System.EventHandler(this.DarkModeEnableToolStripMenuItem_Click);
@@ -546,19 +546,19 @@ namespace LAWC
             // toolStripMenuItem13
             // 
             this.toolStripMenuItem13.Name = "toolStripMenuItem13";
-            this.toolStripMenuItem13.Size = new System.Drawing.Size(196, 6);
+            this.toolStripMenuItem13.Size = new System.Drawing.Size(232, 6);
             // 
             // restoreWindowToolStripMenuItem
             // 
             this.restoreWindowToolStripMenuItem.Name = "restoreWindowToolStripMenuItem";
-            this.restoreWindowToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.restoreWindowToolStripMenuItem.Size = new System.Drawing.Size(235, 24);
             this.restoreWindowToolStripMenuItem.Text = "Show LAWC";
             this.restoreWindowToolStripMenuItem.Click += new System.EventHandler(this.RestoreWindowToolStripMenuItem_Click);
             // 
             // hideLAWCToolStripMenuItem
             // 
             this.hideLAWCToolStripMenuItem.Name = "hideLAWCToolStripMenuItem";
-            this.hideLAWCToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.hideLAWCToolStripMenuItem.Size = new System.Drawing.Size(235, 24);
             this.hideLAWCToolStripMenuItem.Text = "Hide LAWC";
             this.hideLAWCToolStripMenuItem.Visible = false;
             this.hideLAWCToolStripMenuItem.Click += new System.EventHandler(this.HideLAWCToolStripMenuItem_Click);
@@ -566,19 +566,19 @@ namespace LAWC
             // resetPositionToolStripMenuItem
             // 
             this.resetPositionToolStripMenuItem.Name = "resetPositionToolStripMenuItem";
-            this.resetPositionToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.resetPositionToolStripMenuItem.Size = new System.Drawing.Size(235, 24);
             this.resetPositionToolStripMenuItem.Text = "&Reset Size and Position";
             this.resetPositionToolStripMenuItem.Click += new System.EventHandler(this.resetPositionToolStripMenuItem_Click);
             // 
             // toolStripMenuItem11
             // 
             this.toolStripMenuItem11.Name = "toolStripMenuItem11";
-            this.toolStripMenuItem11.Size = new System.Drawing.Size(196, 6);
+            this.toolStripMenuItem11.Size = new System.Drawing.Size(232, 6);
             // 
             // changeWallpaperNowToolStripMenuItem
             // 
             this.changeWallpaperNowToolStripMenuItem.Name = "changeWallpaperNowToolStripMenuItem";
-            this.changeWallpaperNowToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.changeWallpaperNowToolStripMenuItem.Size = new System.Drawing.Size(235, 24);
             this.changeWallpaperNowToolStripMenuItem.Text = "Change Wallpaper Now";
             this.changeWallpaperNowToolStripMenuItem.Click += new System.EventHandler(this.ChangeWallpaperNowToolStripMenuItem_Click);
             // 
@@ -586,12 +586,12 @@ namespace LAWC
             // 
             this.extendedToolStripSeparator2.ForeColor = System.Drawing.SystemColors.Control;
             this.extendedToolStripSeparator2.Name = "extendedToolStripSeparator2";
-            this.extendedToolStripSeparator2.Size = new System.Drawing.Size(196, 6);
+            this.extendedToolStripSeparator2.Size = new System.Drawing.Size(232, 6);
             // 
             // exitToolStripMenuItem1
             // 
             this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(199, 22);
+            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(235, 24);
             this.exitToolStripMenuItem1.Text = "&Exit";
             this.exitToolStripMenuItem1.Click += new System.EventHandler(this.ExitToolStripMenuItem1_Click);
             // 
@@ -611,10 +611,10 @@ namespace LAWC
             // 
             this.btnWebsites.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnWebsites.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWebsites.Location = new System.Drawing.Point(557, 6);
+            this.btnWebsites.Location = new System.Drawing.Point(696, 8);
             this.btnWebsites.Margin = new System.Windows.Forms.Padding(2);
             this.btnWebsites.Name = "btnWebsites";
-            this.btnWebsites.Size = new System.Drawing.Size(89, 30);
+            this.btnWebsites.Size = new System.Drawing.Size(111, 38);
             this.btnWebsites.TabIndex = 17;
             this.btnWebsites.Text = "Websites";
             this.toolTip1.SetToolTip(this.btnWebsites, "List of Wallpaper websites that you can add to and share.");
@@ -629,11 +629,11 @@ namespace LAWC
             this.lblWorkingImages.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblWorkingImages.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWorkingImages.ForeColor = System.Drawing.Color.Black;
-            this.lblWorkingImages.Location = new System.Drawing.Point(0, 40);
-            this.lblWorkingImages.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblWorkingImages.Location = new System.Drawing.Point(0, 50);
+            this.lblWorkingImages.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lblWorkingImages.Name = "lblWorkingImages";
             this.lblWorkingImages.Padding = new System.Windows.Forms.Padding(2);
-            this.lblWorkingImages.Size = new System.Drawing.Size(746, 24);
+            this.lblWorkingImages.Size = new System.Drawing.Size(932, 30);
             this.lblWorkingImages.TabIndex = 5;
             this.lblWorkingImages.Text = "Working... Please Wait";
             this.lblWorkingImages.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -645,10 +645,10 @@ namespace LAWC
             // 
             this.btnAdvancedSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAdvancedSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdvancedSettings.Location = new System.Drawing.Point(453, 9);
+            this.btnAdvancedSettings.Location = new System.Drawing.Point(566, 11);
             this.btnAdvancedSettings.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdvancedSettings.Name = "btnAdvancedSettings";
-            this.btnAdvancedSettings.Size = new System.Drawing.Size(26, 24);
+            this.btnAdvancedSettings.Size = new System.Drawing.Size(32, 30);
             this.btnAdvancedSettings.TabIndex = 18;
             this.btnAdvancedSettings.Text = "A";
             this.toolTip1.SetToolTip(this.btnAdvancedSettings, "Open the Advanced Settings");
@@ -661,11 +661,11 @@ namespace LAWC
             this.lblDonate.AutoSize = true;
             this.lblDonate.BackColor = System.Drawing.Color.Transparent;
             this.lblDonate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblDonate.Location = new System.Drawing.Point(641, 271);
+            this.lblDonate.Location = new System.Drawing.Point(801, 339);
             this.lblDonate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDonate.Name = "lblDonate";
             this.lblDonate.Padding = new System.Windows.Forms.Padding(2);
-            this.lblDonate.Size = new System.Drawing.Size(92, 19);
+            this.lblDonate.Size = new System.Drawing.Size(113, 22);
             this.lblDonate.TabIndex = 14;
             this.lblDonate.TabStop = true;
             this.lblDonate.Text = "Please Donate :)";
@@ -678,10 +678,10 @@ namespace LAWC
             this.pbDownloadLatest.BackColor = System.Drawing.Color.Transparent;
             this.pbDownloadLatest.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbDownloadLatest.Image = ((System.Drawing.Image)(resources.GetObject("pbDownloadLatest.Image")));
-            this.pbDownloadLatest.Location = new System.Drawing.Point(387, 6);
+            this.pbDownloadLatest.Location = new System.Drawing.Point(484, 8);
             this.pbDownloadLatest.Margin = new System.Windows.Forms.Padding(2);
             this.pbDownloadLatest.Name = "pbDownloadLatest";
-            this.pbDownloadLatest.Size = new System.Drawing.Size(41, 30);
+            this.pbDownloadLatest.Size = new System.Drawing.Size(51, 38);
             this.pbDownloadLatest.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbDownloadLatest.TabIndex = 45;
             this.pbDownloadLatest.TabStop = false;
@@ -694,10 +694,10 @@ namespace LAWC
             this.pbNoInternet.BackColor = System.Drawing.Color.Transparent;
             this.pbNoInternet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbNoInternet.Image = ((System.Drawing.Image)(resources.GetObject("pbNoInternet.Image")));
-            this.pbNoInternet.Location = new System.Drawing.Point(342, 6);
+            this.pbNoInternet.Location = new System.Drawing.Point(428, 8);
             this.pbNoInternet.Margin = new System.Windows.Forms.Padding(2);
             this.pbNoInternet.Name = "pbNoInternet";
-            this.pbNoInternet.Size = new System.Drawing.Size(41, 30);
+            this.pbNoInternet.Size = new System.Drawing.Size(51, 38);
             this.pbNoInternet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbNoInternet.TabIndex = 46;
             this.pbNoInternet.TabStop = false;
@@ -737,7 +737,7 @@ namespace LAWC
             this.olvImages.HeaderWordWrap = true;
             this.olvImages.HideSelection = false;
             this.olvImages.IncludeColumnHeadersInCopy = true;
-            this.olvImages.Location = new System.Drawing.Point(4, 42);
+            this.olvImages.Location = new System.Drawing.Point(5, 52);
             this.olvImages.Margin = new System.Windows.Forms.Padding(2);
             this.olvImages.MultiSelect = false;
             this.olvImages.Name = "olvImages";
@@ -754,7 +754,7 @@ namespace LAWC
             this.olvImages.ShowHeaderInAllViews = false;
             this.olvImages.ShowImagesOnSubItems = true;
             this.olvImages.ShowItemToolTips = true;
-            this.olvImages.Size = new System.Drawing.Size(337, 442);
+            this.olvImages.Size = new System.Drawing.Size(421, 552);
             this.olvImages.SortGroupItemsByPrimaryColumn = false;
             this.olvImages.TabIndex = 39;
             this.olvImages.TriStateCheckBoxes = true;
@@ -855,7 +855,7 @@ namespace LAWC
             this.olvFolders.HeaderWordWrap = true;
             this.olvFolders.HideSelection = false;
             this.olvFolders.IncludeColumnHeadersInCopy = true;
-            this.olvFolders.Location = new System.Drawing.Point(346, 42);
+            this.olvFolders.Location = new System.Drawing.Point(432, 52);
             this.olvFolders.Margin = new System.Windows.Forms.Padding(2);
             this.olvFolders.MultiSelect = false;
             this.olvFolders.Name = "olvFolders";
@@ -872,7 +872,7 @@ namespace LAWC
             this.olvFolders.ShowHeaderInAllViews = false;
             this.olvFolders.ShowImagesOnSubItems = true;
             this.olvFolders.ShowItemToolTips = true;
-            this.olvFolders.Size = new System.Drawing.Size(395, 213);
+            this.olvFolders.Size = new System.Drawing.Size(493, 266);
             this.olvFolders.SortGroupItemsByPrimaryColumn = false;
             this.olvFolders.TabIndex = 37;
             this.olvFolders.TriStateCheckBoxes = true;
@@ -888,7 +888,7 @@ namespace LAWC
             // 
             // olvColumn1
             // 
-            this.olvColumn1.AspectName = "Path";
+            this.olvColumn1.AspectName = "PathDisplay";
             this.olvColumn1.FillsFreeSpace = true;
             this.olvColumn1.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.olvColumn1.MaximumWidth = 3000;
@@ -927,9 +927,10 @@ namespace LAWC
             this.tslblScreenMode,
             this.tslblTimeToNextChange,
             this.tslblMonitorInfo});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 494);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 620);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(746, 22);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 18, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(932, 25);
             this.statusStrip1.TabIndex = 12;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -937,7 +938,7 @@ namespace LAWC
             // 
             this.lblStatus.Margin = new System.Windows.Forms.Padding(5, 3, 5, 2);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(42, 17);
+            this.lblStatus.Size = new System.Drawing.Size(53, 21);
             this.lblStatus.Text = "Ready.";
             this.lblStatus.Visible = false;
             this.lblStatus.Click += new System.EventHandler(this.lblStatus_Click);
@@ -946,7 +947,7 @@ namespace LAWC
             // 
             this.pbarStatus.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.pbarStatus.Name = "pbarStatus";
-            this.pbarStatus.Size = new System.Drawing.Size(140, 16);
+            this.pbarStatus.Size = new System.Drawing.Size(175, 20);
             this.pbarStatus.Visible = false;
             this.pbarStatus.Click += new System.EventHandler(this.PbarStatus_Click);
             // 
@@ -954,7 +955,7 @@ namespace LAWC
             // 
             this.tslblImageCount.Margin = new System.Windows.Forms.Padding(5, 3, 5, 2);
             this.tslblImageCount.Name = "tslblImageCount";
-            this.tslblImageCount.Size = new System.Drawing.Size(79, 17);
+            this.tslblImageCount.Size = new System.Drawing.Size(101, 20);
             this.tslblImageCount.Text = "# Images: 000";
             this.tslblImageCount.ToolTipText = "The number of available images in the list above";
             this.tslblImageCount.Click += new System.EventHandler(this.TslblImageCount_Click);
@@ -963,7 +964,7 @@ namespace LAWC
             // 
             this.tslblScreenMode.Margin = new System.Windows.Forms.Padding(5, 3, 5, 2);
             this.tslblScreenMode.Name = "tslblScreenMode";
-            this.tslblScreenMode.Size = new System.Drawing.Size(109, 17);
+            this.tslblScreenMode.Size = new System.Drawing.Size(136, 20);
             this.tslblScreenMode.Text = "Screen Mode: Light";
             this.tslblScreenMode.Click += new System.EventHandler(this.TslblScreenMode_Click);
             // 
@@ -971,7 +972,7 @@ namespace LAWC
             // 
             this.tslblTimeToNextChange.Margin = new System.Windows.Forms.Padding(5, 3, 5, 2);
             this.tslblTimeToNextChange.Name = "tslblTimeToNextChange";
-            this.tslblTimeToNextChange.Size = new System.Drawing.Size(106, 17);
+            this.tslblTimeToNextChange.Size = new System.Drawing.Size(133, 20);
             this.tslblTimeToNextChange.Text = "Change in 00:00:00";
             this.tslblTimeToNextChange.ToolTipText = "Shows the time left before the next wallpaper change.\r\n\r\nWARNING: Clicking here w" +
     "ill RESET the count down until the next wallpaper change";
@@ -980,7 +981,7 @@ namespace LAWC
             // 
             this.tslblMonitorInfo.Margin = new System.Windows.Forms.Padding(5, 3, 5, 2);
             this.tslblMonitorInfo.Name = "tslblMonitorInfo";
-            this.tslblMonitorInfo.Size = new System.Drawing.Size(28, 17);
+            this.tslblMonitorInfo.Size = new System.Drawing.Size(35, 20);
             this.tslblMonitorInfo.Text = "Info";
             this.tslblMonitorInfo.ToolTipText = "The number of screens detected by Windows.\r\n\r\nClicking here will show you some mo" +
     "re information on the resolution and position of each screen.";
@@ -1002,20 +1003,20 @@ namespace LAWC
             this.toolStripMenuItem10,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 36);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 46);
             this.fileToolStripMenuItem.Text = "&File";
             // 
             // loadSettingsToolStripMenuItem
             // 
             this.loadSettingsToolStripMenuItem.Name = "loadSettingsToolStripMenuItem";
-            this.loadSettingsToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.loadSettingsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.loadSettingsToolStripMenuItem.Text = "&Open Settings";
             this.loadSettingsToolStripMenuItem.Click += new System.EventHandler(this.loadSettingsToolStripMenuItem_Click);
             // 
             // saveSettingsToolStripMenuItem
             // 
             this.saveSettingsToolStripMenuItem.Name = "saveSettingsToolStripMenuItem";
-            this.saveSettingsToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.saveSettingsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.saveSettingsToolStripMenuItem.Text = "&Save Settings";
             this.saveSettingsToolStripMenuItem.ToolTipText = "Save the settings. This is done automatically usually, so you should not have to " +
     "use this, unless you are diagnosing issues.";
@@ -1024,14 +1025,14 @@ namespace LAWC
             // saveSettingsAsToolStripMenuItem
             // 
             this.saveSettingsAsToolStripMenuItem.Name = "saveSettingsAsToolStripMenuItem";
-            this.saveSettingsAsToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.saveSettingsAsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.saveSettingsAsToolStripMenuItem.Text = "Save Settings &As...";
             this.saveSettingsAsToolStripMenuItem.Click += new System.EventHandler(this.saveSettingsAsToolStripMenuItem_Click);
             // 
             // backupSettingsToolStripMenuItem
             // 
             this.backupSettingsToolStripMenuItem.Name = "backupSettingsToolStripMenuItem";
-            this.backupSettingsToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.backupSettingsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.backupSettingsToolStripMenuItem.Text = "&Backup Settings";
             this.backupSettingsToolStripMenuItem.ToolTipText = "Make a copy of the Settings file, labelled with todays date. This is in the Setti" +
     "ngs Folder, which can be accessed by pressing the button on the Settings window." +
@@ -1042,19 +1043,19 @@ namespace LAWC
             // 
             this.restoreLastBackupToolStripMenuItem.Enabled = false;
             this.restoreLastBackupToolStripMenuItem.Name = "restoreLastBackupToolStripMenuItem";
-            this.restoreLastBackupToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.restoreLastBackupToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.restoreLastBackupToolStripMenuItem.Text = "&Restore Last Backup";
             this.restoreLastBackupToolStripMenuItem.Click += new System.EventHandler(this.restoreLastBackupToolStripMenuItem_Click);
             // 
             // toolStripMenuItem10
             // 
             this.toolStripMenuItem10.Name = "toolStripMenuItem10";
-            this.toolStripMenuItem10.Size = new System.Drawing.Size(176, 6);
+            this.toolStripMenuItem10.Size = new System.Drawing.Size(221, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.ToolTipText = "Quit LAWC";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
@@ -1069,20 +1070,20 @@ namespace LAWC
             this.toolStripMenuItem9,
             this.aboutToolStripMenuItem1});
             this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
-            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(44, 36);
+            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(55, 46);
             this.helpToolStripMenuItem1.Text = "&Help";
             // 
             // guideToolStripMenuItem
             // 
             this.guideToolStripMenuItem.Name = "guideToolStripMenuItem";
-            this.guideToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.guideToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.guideToolStripMenuItem.Text = "&Website";
             this.guideToolStripMenuItem.Click += new System.EventHandler(this.guideToolStripMenuItem_Click);
             // 
             // checkForUpdateToolStripMenuItem
             // 
             this.checkForUpdateToolStripMenuItem.Name = "checkForUpdateToolStripMenuItem";
-            this.checkForUpdateToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.checkForUpdateToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.checkForUpdateToolStripMenuItem.Text = "Check for &Update";
             this.checkForUpdateToolStripMenuItem.ToolTipText = "Check if there is a new version of LAWC.";
             this.checkForUpdateToolStripMenuItem.Click += new System.EventHandler(this.CheckForUpdateToolStripMenuItem_Click_1);
@@ -1090,24 +1091,24 @@ namespace LAWC
             // toolStripMenuItem15
             // 
             this.toolStripMenuItem15.Name = "toolStripMenuItem15";
-            this.toolStripMenuItem15.Size = new System.Drawing.Size(163, 6);
+            this.toolStripMenuItem15.Size = new System.Drawing.Size(207, 6);
             // 
             // sendErrorReportToolStripMenuItem
             // 
             this.sendErrorReportToolStripMenuItem.Name = "sendErrorReportToolStripMenuItem";
-            this.sendErrorReportToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.sendErrorReportToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.sendErrorReportToolStripMenuItem.Text = "Send &Error Report";
             this.sendErrorReportToolStripMenuItem.Click += new System.EventHandler(this.sendErrorReportToolStripMenuItem_Click);
             // 
             // toolStripMenuItem9
             // 
             this.toolStripMenuItem9.Name = "toolStripMenuItem9";
-            this.toolStripMenuItem9.Size = new System.Drawing.Size(163, 6);
+            this.toolStripMenuItem9.Size = new System.Drawing.Size(207, 6);
             // 
             // aboutToolStripMenuItem1
             // 
             this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
-            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(166, 22);
+            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(210, 26);
             this.aboutToolStripMenuItem1.Text = "&About";
             this.aboutToolStripMenuItem1.ToolTipText = "Information about LAWC.";
             this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.AboutToolStripMenuItem1_Click);
@@ -1123,7 +1124,7 @@ namespace LAWC
             this.helpToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(746, 40);
+            this.menuStrip1.Size = new System.Drawing.Size(932, 50);
             this.menuStrip1.TabIndex = 13;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1140,13 +1141,13 @@ namespace LAWC
             this.extendedToolStripSeparator3,
             this.resetSettingsToolStripMenuItem});
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 36);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(75, 46);
             this.optionsToolStripMenuItem.Text = "&Options";
             // 
             // runSetupWizardToolStripMenuItem
             // 
             this.runSetupWizardToolStripMenuItem.Name = "runSetupWizardToolStripMenuItem";
-            this.runSetupWizardToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.runSetupWizardToolStripMenuItem.Size = new System.Drawing.Size(260, 26);
             this.runSetupWizardToolStripMenuItem.Text = "&Run Setup Wizard";
             this.runSetupWizardToolStripMenuItem.ToolTipText = "Run the set up wizard again to re-set your current settings.";
             this.runSetupWizardToolStripMenuItem.Click += new System.EventHandler(this.RunSetupWizardToolStripMenuItem_Click);
@@ -1154,19 +1155,19 @@ namespace LAWC
             // retryInternetConnectionToolStripMenuItem
             // 
             this.retryInternetConnectionToolStripMenuItem.Name = "retryInternetConnectionToolStripMenuItem";
-            this.retryInternetConnectionToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.retryInternetConnectionToolStripMenuItem.Size = new System.Drawing.Size(260, 26);
             this.retryInternetConnectionToolStripMenuItem.Text = "Retry &Internet Connection";
             this.retryInternetConnectionToolStripMenuItem.Click += new System.EventHandler(this.retryInternetConnectionToolStripMenuItem_Click);
             // 
             // toolStripMenuItem7
             // 
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(207, 6);
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(257, 6);
             // 
             // changeWallpaperToolStripMenuItem
             // 
             this.changeWallpaperToolStripMenuItem.Name = "changeWallpaperToolStripMenuItem";
-            this.changeWallpaperToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.changeWallpaperToolStripMenuItem.Size = new System.Drawing.Size(260, 26);
             this.changeWallpaperToolStripMenuItem.Text = "&Change Wallpaper";
             this.changeWallpaperToolStripMenuItem.ToolTipText = "Change the wallpaper now.";
             this.changeWallpaperToolStripMenuItem.Click += new System.EventHandler(this.ChangeWallpaperToolStripMenuItem_Click);
@@ -1174,19 +1175,19 @@ namespace LAWC
             // toolStripMenuItem6
             // 
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(207, 6);
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(257, 6);
             // 
             // settingsToolStripMenuItem1
             // 
             this.settingsToolStripMenuItem1.Name = "settingsToolStripMenuItem1";
-            this.settingsToolStripMenuItem1.Size = new System.Drawing.Size(210, 22);
+            this.settingsToolStripMenuItem1.Size = new System.Drawing.Size(260, 26);
             this.settingsToolStripMenuItem1.Text = "&Settings";
             this.settingsToolStripMenuItem1.Click += new System.EventHandler(this.settingsToolStripMenuItem1_Click);
             // 
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(260, 26);
             this.settingsToolStripMenuItem.Text = "&Advanced &Settings";
             this.settingsToolStripMenuItem.ToolTipText = "Open the Settings window.";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.SettingsToolStripMenuItem_Click);
@@ -1194,12 +1195,12 @@ namespace LAWC
             // extendedToolStripSeparator3
             // 
             this.extendedToolStripSeparator3.Name = "extendedToolStripSeparator3";
-            this.extendedToolStripSeparator3.Size = new System.Drawing.Size(207, 6);
+            this.extendedToolStripSeparator3.Size = new System.Drawing.Size(257, 6);
             // 
             // resetSettingsToolStripMenuItem
             // 
             this.resetSettingsToolStripMenuItem.Name = "resetSettingsToolStripMenuItem";
-            this.resetSettingsToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.resetSettingsToolStripMenuItem.Size = new System.Drawing.Size(260, 26);
             this.resetSettingsToolStripMenuItem.Text = "Reset All Settings";
             this.resetSettingsToolStripMenuItem.ToolTipText = "Reset the Settings back to the defaults.";
             this.resetSettingsToolStripMenuItem.Click += new System.EventHandler(this.ResetSettingsToolStripMenuItem_Click);
@@ -1214,13 +1215,13 @@ namespace LAWC
             this.renameToolToolStripMenuItem,
             this.wallpaperWebsitesToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(46, 36);
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(58, 46);
             this.toolsToolStripMenuItem.Text = "&Tools";
             // 
             // deleteWallpaperFilesToolStripMenuItem1
             // 
             this.deleteWallpaperFilesToolStripMenuItem1.Name = "deleteWallpaperFilesToolStripMenuItem1";
-            this.deleteWallpaperFilesToolStripMenuItem1.Size = new System.Drawing.Size(189, 22);
+            this.deleteWallpaperFilesToolStripMenuItem1.Size = new System.Drawing.Size(241, 26);
             this.deleteWallpaperFilesToolStripMenuItem1.Text = "&Delete Wallpaper Files";
             this.deleteWallpaperFilesToolStripMenuItem1.Visible = false;
             this.deleteWallpaperFilesToolStripMenuItem1.Click += new System.EventHandler(this.deleteWallpaperFilesToolStripMenuItem1_Click);
@@ -1228,35 +1229,35 @@ namespace LAWC
             // rescanAllFoldersToolStripMenuItem2
             // 
             this.rescanAllFoldersToolStripMenuItem2.Name = "rescanAllFoldersToolStripMenuItem2";
-            this.rescanAllFoldersToolStripMenuItem2.Size = new System.Drawing.Size(189, 22);
+            this.rescanAllFoldersToolStripMenuItem2.Size = new System.Drawing.Size(241, 26);
             this.rescanAllFoldersToolStripMenuItem2.Text = "Rescan &All Folders";
             this.rescanAllFoldersToolStripMenuItem2.Click += new System.EventHandler(this.rescanAllFoldersToolStripMenuItem2_Click);
             // 
             // checkFolderPathsToolStripMenuItem1
             // 
             this.checkFolderPathsToolStripMenuItem1.Name = "checkFolderPathsToolStripMenuItem1";
-            this.checkFolderPathsToolStripMenuItem1.Size = new System.Drawing.Size(189, 22);
+            this.checkFolderPathsToolStripMenuItem1.Size = new System.Drawing.Size(241, 26);
             this.checkFolderPathsToolStripMenuItem1.Text = "&Check Folder Paths";
             this.checkFolderPathsToolStripMenuItem1.Click += new System.EventHandler(this.checkFolderPathsToolStripMenuItem1_Click);
             // 
             // resetAllViewcountToolStripMenuItem1
             // 
             this.resetAllViewcountToolStripMenuItem1.Name = "resetAllViewcountToolStripMenuItem1";
-            this.resetAllViewcountToolStripMenuItem1.Size = new System.Drawing.Size(189, 22);
+            this.resetAllViewcountToolStripMenuItem1.Size = new System.Drawing.Size(241, 26);
             this.resetAllViewcountToolStripMenuItem1.Text = "Reset All &Viewcount";
             this.resetAllViewcountToolStripMenuItem1.Click += new System.EventHandler(this.resetAllViewcountToolStripMenuItem1_Click);
             // 
             // renameToolToolStripMenuItem
             // 
             this.renameToolToolStripMenuItem.Name = "renameToolToolStripMenuItem";
-            this.renameToolToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.renameToolToolStripMenuItem.Size = new System.Drawing.Size(241, 26);
             this.renameToolToolStripMenuItem.Text = "&Rename Tool";
             this.renameToolToolStripMenuItem.Click += new System.EventHandler(this.renameToolToolStripMenuItem_Click);
             // 
             // wallpaperWebsitesToolStripMenuItem
             // 
             this.wallpaperWebsitesToolStripMenuItem.Name = "wallpaperWebsitesToolStripMenuItem";
-            this.wallpaperWebsitesToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.wallpaperWebsitesToolStripMenuItem.Size = new System.Drawing.Size(241, 26);
             this.wallpaperWebsitesToolStripMenuItem.Text = "&Wallpaper Websites";
             this.wallpaperWebsitesToolStripMenuItem.Click += new System.EventHandler(this.wallpaperWebsitesToolStripMenuItem_Click);
             // 
@@ -1275,10 +1276,10 @@ namespace LAWC
             this.pnlSearch.Controls.Add(this.lblClear);
             this.pnlSearch.Controls.Add(this.txtSearch);
             this.pnlSearch.Controls.Add(this.lblSearch);
-            this.pnlSearch.Location = new System.Drawing.Point(55, 420);
+            this.pnlSearch.Location = new System.Drawing.Point(69, 525);
             this.pnlSearch.Margin = new System.Windows.Forms.Padding(2);
             this.pnlSearch.Name = "pnlSearch";
-            this.pnlSearch.Size = new System.Drawing.Size(223, 31);
+            this.pnlSearch.Size = new System.Drawing.Size(278, 38);
             this.pnlSearch.TabIndex = 44;
             // 
             // lblClear
@@ -1286,10 +1287,10 @@ namespace LAWC
             this.lblClear.AutoSize = true;
             this.lblClear.BackColor = System.Drawing.Color.Transparent;
             this.lblClear.Enabled = false;
-            this.lblClear.Location = new System.Drawing.Point(183, 8);
+            this.lblClear.Location = new System.Drawing.Point(229, 10);
             this.lblClear.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblClear.Name = "lblClear";
-            this.lblClear.Size = new System.Drawing.Size(31, 13);
+            this.lblClear.Size = new System.Drawing.Size(39, 16);
             this.lblClear.TabIndex = 48;
             this.lblClear.Text = "Clear";
             this.lblClear.Click += new System.EventHandler(this.lblClear_Click_1);
@@ -1298,11 +1299,11 @@ namespace LAWC
             // 
             this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSearch.Location = new System.Drawing.Point(50, 6);
+            this.txtSearch.Location = new System.Drawing.Point(62, 8);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearch.MaxLength = 50;
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(127, 20);
+            this.txtSearch.Size = new System.Drawing.Size(158, 22);
             this.txtSearch.TabIndex = 47;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -1310,10 +1311,10 @@ namespace LAWC
             // 
             this.lblSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblSearch.AutoSize = true;
-            this.lblSearch.Location = new System.Drawing.Point(2, 7);
+            this.lblSearch.Location = new System.Drawing.Point(2, 9);
             this.lblSearch.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(41, 13);
+            this.lblSearch.Size = new System.Drawing.Size(50, 16);
             this.lblSearch.TabIndex = 46;
             this.lblSearch.Text = "Search";
             this.lblSearch.Click += new System.EventHandler(this.lblSearch_Click);
@@ -1323,10 +1324,10 @@ namespace LAWC
             this.sbImagesVert.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sbImagesVert.BorderColour = System.Drawing.Color.Gray;
-            this.sbImagesVert.Location = new System.Drawing.Point(321, 42);
+            this.sbImagesVert.Location = new System.Drawing.Point(401, 52);
             this.sbImagesVert.Margin = new System.Windows.Forms.Padding(2);
             this.sbImagesVert.Name = "sbImagesVert";
-            this.sbImagesVert.Size = new System.Drawing.Size(19, 442);
+            this.sbImagesVert.Size = new System.Drawing.Size(19, 552);
             this.sbImagesVert.TabIndex = 47;
             this.sbImagesVert.Visible = false;
             this.sbImagesVert.Scroll += new System.Windows.Forms.ScrollEventHandler(this.sbImagesVert_Scroll);
@@ -1334,9 +1335,9 @@ namespace LAWC
             // FrmMain
             // 
             this.AllowDrop = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(746, 516);
+            this.ClientSize = new System.Drawing.Size(932, 645);
             this.Controls.Add(this.lblWorkingImages);
             this.Controls.Add(this.sbImagesVert);
             this.Controls.Add(this.pbNoInternet);
@@ -1358,7 +1359,7 @@ namespace LAWC
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(100, 50);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MinimumSize = new System.Drawing.Size(744, 535);
+            this.MinimumSize = new System.Drawing.Size(926, 657);
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Light Adjusting Wallpaper Changer - LAWC";
